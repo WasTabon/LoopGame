@@ -20,8 +20,16 @@ public static class LoopPathBuilder
             bool[] conn = current.currentPiece.GetConnections();
             bool moved = false;
 
-            for (int d = 0; d < 4; d++)
+            int preferredDir = -1;
+            if (current.currentPiece.pieceType == PieceType.Bridge && cameFrom != -1)
             {
+                preferredDir = (int)PieceConnections.Opposite((Direction)cameFrom);
+            }
+
+            for (int attempt = 0; attempt < 4 && !moved; attempt++)
+            {
+                int d = preferredDir >= 0 && attempt == 0 ? preferredDir : attempt;
+                if (preferredDir >= 0 && attempt > 0 && d == preferredDir) continue;
                 if (!conn[d]) continue;
                 if (cameFrom != -1 && d == cameFrom) continue;
 
@@ -39,7 +47,6 @@ public static class LoopPathBuilder
                 current = neighbor;
                 cameFrom = (int)opposite;
                 moved = true;
-                break;
             }
 
             if (!moved) break;

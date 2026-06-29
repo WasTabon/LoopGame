@@ -10,11 +10,163 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a476f91be1dd2c42ba8fa0a48725228, type: 3}
-  m_Name: Level_18
+  m_Name: Level_28
   m_EditorClassIdentifier: 
   width: 6
   height: 6
   cells:
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 3
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 2
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 3
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 3
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
   - cellType: 2
     pieceType: 2
     rotationSteps: 3
@@ -24,15 +176,7 @@ MonoBehaviour:
     maxRotations: 0
     directional: 0
   - cellType: 2
-    pieceType: 2
-    rotationSteps: 2
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
+    pieceType: 1
     rotationSteps: 0
     isStart: 0
     color: 0
@@ -40,23 +184,7 @@ MonoBehaviour:
     maxRotations: 0
     directional: 0
   - cellType: 2
-    pieceType: 2
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
+    pieceType: 5
     rotationSteps: 0
     isStart: 0
     color: 0
@@ -64,231 +192,7 @@ MonoBehaviour:
     maxRotations: 0
     directional: 0
   - cellType: 2
-    pieceType: 2
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 2
-    pieceType: 2
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 2
-    pieceType: 2
-    rotationSteps: 2
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-  - cellType: 2
-    pieceType: 2
+    pieceType: 1
     rotationSteps: 0
     isStart: 0
     color: 0
@@ -303,50 +207,181 @@ MonoBehaviour:
     portalId: 0
     maxRotations: 0
     directional: 0
-  levelNumber: 18
-  world: 4
-  parMoves: 10
-  requiredLoops: 2
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 3
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 3
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 1
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+  levelNumber: 28
+  world: 5
+  parMoves: 14
+  requiredLoops: 1
   colorLoopsMode: 0
   coverAllMode: 0
   solution:
-  - tx: 0
-    ty: 0
-    pieceType: 2
+  - tx: 3
+    ty: 3
+    pieceType: 5
     rotationSteps: 0
     color: 0
-  - tx: 1
-    ty: 0
-    pieceType: 2
-    rotationSteps: 3
+  - tx: 4
+    ty: 3
+    pieceType: 1
+    rotationSteps: 1
     color: 0
-  - tx: 1
-    ty: 1
+  - tx: 5
+    ty: 3
     pieceType: 2
     rotationSteps: 2
     color: 0
-  - tx: 0
+  - tx: 5
+    ty: 2
+    pieceType: 1
+    rotationSteps: 0
+    color: 0
+  - tx: 5
     ty: 1
+    pieceType: 2
+    rotationSteps: 3
+    color: 0
+  - tx: 4
+    ty: 1
+    pieceType: 1
+    rotationSteps: 1
+    color: 0
+  - tx: 3
+    ty: 1
+    pieceType: 2
+    rotationSteps: 0
+    color: 0
+  - tx: 3
+    ty: 2
+    pieceType: 1
+    rotationSteps: 0
+    color: 0
+  - tx: 3
+    ty: 4
+    pieceType: 1
+    rotationSteps: 0
+    color: 0
+  - tx: 3
+    ty: 5
+    pieceType: 2
+    rotationSteps: 2
+    color: 0
+  - tx: 2
+    ty: 5
+    pieceType: 1
+    rotationSteps: 1
+    color: 0
+  - tx: 1
+    ty: 5
     pieceType: 2
     rotationSteps: 1
     color: 0
-  - tx: 4
+  - tx: 1
     ty: 4
+    pieceType: 1
+    rotationSteps: 0
+    color: 0
+  - tx: 1
+    ty: 3
     pieceType: 2
     rotationSteps: 0
     color: 0
-  - tx: 5
-    ty: 4
-    pieceType: 2
-    rotationSteps: 3
-    color: 0
-  - tx: 5
-    ty: 5
-    pieceType: 2
-    rotationSteps: 2
-    color: 0
-  - tx: 4
-    ty: 5
-    pieceType: 2
+  - tx: 2
+    ty: 3
+    pieceType: 1
     rotationSteps: 1
     color: 0
