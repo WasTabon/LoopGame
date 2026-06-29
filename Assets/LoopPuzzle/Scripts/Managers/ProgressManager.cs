@@ -7,6 +7,7 @@ public class ProgressManager : MonoBehaviour
     private const string StarsKeyPrefix = "level_stars_";
     private const string BestKeyPrefix = "level_best_";
     private const string UnlockedKey = "max_unlocked_level";
+    private const string TutorialKeyPrefix = "tutorial_seen_";
 
     private void Awake()
     {
@@ -22,6 +23,17 @@ public class ProgressManager : MonoBehaviour
     public int GetStars(int levelNumber)
     {
         return PlayerPrefs.GetInt(StarsKeyPrefix + levelNumber, 0);
+    }
+
+    public bool IsTutorialSeen(string tutorialId)
+    {
+        return PlayerPrefs.GetInt(TutorialKeyPrefix + tutorialId, 0) == 1;
+    }
+
+    public void MarkTutorialSeen(string tutorialId)
+    {
+        PlayerPrefs.SetInt(TutorialKeyPrefix + tutorialId, 1);
+        PlayerPrefs.Save();
     }
 
     public int GetBestMoves(int levelNumber)
@@ -69,6 +81,8 @@ public class ProgressManager : MonoBehaviour
             PlayerPrefs.DeleteKey(StarsKeyPrefix + i);
             PlayerPrefs.DeleteKey(BestKeyPrefix + i);
         }
+        PlayerPrefs.DeleteKey(TutorialKeyPrefix + "rotate");
+        PlayerPrefs.DeleteKey(TutorialKeyPrefix + "drag");
         PlayerPrefs.SetInt(UnlockedKey, 1);
         PlayerPrefs.Save();
     }

@@ -12,6 +12,7 @@ public static class PieceSpriteFactory
     private static Sprite startSprite;
     private static Sprite glowDotSprite;
     private static Sprite rotationArrowSprite;
+    private static Sprite tapPointerSprite;
 
     private static readonly Color PathColor = new Color(0.290f, 0.565f, 0.886f, 1f);
     private static readonly Color StartColor = new Color(0.961f, 0.651f, 0.137f, 1f);
@@ -171,6 +172,51 @@ public static class PieceSpriteFactory
                 }
             }
         }
+    }
+
+    public static Sprite GetTapPointerSprite()
+    {
+        if (tapPointerSprite != null) return tapPointerSprite;
+
+        Texture2D tex = new Texture2D(TexSize, TexSize, TextureFormat.RGBA32, false);
+        tex.filterMode = FilterMode.Bilinear;
+        tex.wrapMode = TextureWrapMode.Clamp;
+
+        Color[] pixels = new Color[TexSize * TexSize];
+        for (int i = 0; i < pixels.Length; i++) pixels[i] = new Color(0, 0, 0, 0);
+
+        float center = TexSize * 0.5f;
+        float outerRing = TexSize * 0.42f;
+        float ringWidth = TexSize * 0.05f;
+        float innerDot = TexSize * 0.20f;
+        Color white = new Color(1f, 1f, 1f, 0.95f);
+        Color soft = new Color(1f, 1f, 1f, 0.55f);
+
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float dx = x - center;
+                float dy = y - center;
+                float dist = Mathf.Sqrt(dx * dx + dy * dy);
+
+                if (Mathf.Abs(dist - outerRing) < ringWidth)
+                {
+                    pixels[y * TexSize + x] = soft;
+                }
+                else if (dist < innerDot)
+                {
+                    float a = Mathf.Clamp01(1f - dist / innerDot) * 0.4f + 0.6f;
+                    pixels[y * TexSize + x] = new Color(white.r, white.g, white.b, a);
+                }
+            }
+        }
+
+        tex.SetPixels(pixels);
+        tex.Apply();
+        tapPointerSprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
+            new Vector2(0.5f, 0.5f), PixelsPerUnit);
+        return tapPointerSprite;
     }
 
     private static Sprite CreateRoundedSquare(Color color, float cornerFraction)

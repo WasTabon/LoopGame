@@ -21,6 +21,10 @@ public class LevelController : MonoBehaviour
 
     public LevelData CurrentLevel => currentLevel;
 
+    public System.Action<LevelData> OnLevelLoaded;
+    public System.Action<int, int> OnPieceRotated;
+    public System.Action<int, int, int, int> OnPieceDragged;
+
     private void Awake()
     {
         if (gridManager != null)
@@ -65,6 +69,8 @@ public class LevelController : MonoBehaviour
         hud.SetUndoEnabled(false);
 
         pieceInput.SetInputLocked(false);
+
+        OnLevelLoaded?.Invoke(currentLevel);
     }
 
     public void RegisterMove()
@@ -79,6 +85,7 @@ public class LevelController : MonoBehaviour
         if (levelComplete) return;
         history.RecordRotation(x, y);
         hud.SetUndoEnabled(history.HasMoves);
+        OnPieceRotated?.Invoke(x, y);
     }
 
     public void RecordDrag(int fromX, int fromY, int toX, int toY)
@@ -86,6 +93,7 @@ public class LevelController : MonoBehaviour
         if (levelComplete) return;
         history.RecordDrag(fromX, fromY, toX, toY);
         hud.SetUndoEnabled(history.HasMoves);
+        OnPieceDragged?.Invoke(fromX, fromY, toX, toY);
     }
 
     public void Undo()
