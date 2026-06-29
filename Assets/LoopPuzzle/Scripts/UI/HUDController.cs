@@ -10,6 +10,7 @@ public class HUDController : MonoBehaviour
     public Button undoButton;
     public Button restartButton;
     public Button hintButton;
+    public Button pauseButton;
     public LevelController levelController;
 
     private int displayedMoves;
@@ -20,6 +21,7 @@ public class HUDController : MonoBehaviour
         if (undoButton != null) undoButton.onClick.AddListener(OnUndo);
         if (restartButton != null) restartButton.onClick.AddListener(OnRestart);
         if (hintButton != null) hintButton.onClick.AddListener(OnHint);
+        if (pauseButton != null) pauseButton.onClick.AddListener(OnPause);
     }
 
     public void SetLevel(int levelNumber)
@@ -67,5 +69,10 @@ public class HUDController : MonoBehaviour
     private void OnHint()
     {
         if (levelController != null) levelController.RequestHint();
+    }
+
+    private void OnPause()
+    {
+        if (levelController != null) levelController.TogglePause();
     }
 }

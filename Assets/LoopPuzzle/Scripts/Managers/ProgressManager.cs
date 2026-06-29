@@ -25,6 +25,16 @@ public class ProgressManager : MonoBehaviour
         return PlayerPrefs.GetInt(StarsKeyPrefix + levelNumber, 0);
     }
 
+    public int GetTotalStars(int totalLevels)
+    {
+        int sum = 0;
+        for (int i = 1; i <= totalLevels; i++)
+        {
+            sum += GetStars(i);
+        }
+        return sum;
+    }
+
     public bool IsTutorialSeen(string tutorialId)
     {
         return PlayerPrefs.GetInt(TutorialKeyPrefix + tutorialId, 0) == 1;

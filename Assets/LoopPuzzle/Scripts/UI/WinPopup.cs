@@ -10,6 +10,7 @@ public class WinPopup : MonoBehaviour
     public Button restartButton;
     public Button nextButton;
     public Button homeButton;
+    public TextMeshProUGUI nextButtonLabel;
 
     private System.Action onRestart;
     private System.Action onNext;
@@ -38,12 +39,24 @@ public class WinPopup : MonoBehaviour
     public void ShowWin(int moves, int stars, bool hasNext,
         System.Action restartCallback, System.Action nextCallback, System.Action homeCallback)
     {
+        ShowWin(moves, stars, hasNext, false, restartCallback, nextCallback, homeCallback);
+    }
+
+    public void ShowWin(int moves, int stars, bool hasNext, bool isFinalLevel,
+        System.Action restartCallback, System.Action nextCallback, System.Action homeCallback)
+    {
         onRestart = restartCallback;
         onNext = nextCallback;
         onHome = homeCallback;
 
         movesText.text = "Moves: " + moves;
-        nextButton.gameObject.SetActive(hasNext);
+
+        bool showNext = hasNext || isFinalLevel;
+        nextButton.gameObject.SetActive(showNext);
+        if (nextButtonLabel != null)
+        {
+            nextButtonLabel.text = isFinalLevel ? "FINISH" : "NEXT";
+        }
 
         popup.Show();
 

@@ -11,12 +11,15 @@ public class LevelController : MonoBehaviour
     public LoopFlowAnimator flowAnimator;
     public LevelDatabase database;
     public HintSystem hintSystem;
+    public PausePopup pausePopup;
+    public GameCompletePopup gameCompletePopup;
     public string menuSceneName = "MainMenu";
 
     private LevelData currentLevel;
     private int moves;
     private bool levelComplete;
     private bool hintUsed;
+    private bool paused;
     private readonly MoveHistory history = new MoveHistory();
 
     public LevelData CurrentLevel => currentLevel;
@@ -202,7 +205,8 @@ public class LevelController : MonoBehaviour
     private void ShowWinPopup(int stars)
     {
         bool hasNext = database != null && database.GetNext(currentLevel) != null;
-        winPopup.ShowWin(moves, stars, hasNext, OnRestart, OnNext, OnHome);
+        bool isFinal = database != null && !hasNext;
+        winPopup.ShowWin(moves, stars, hasNext, isFinal, OnRestart, OnNext, OnHome);
     }
 
     private void OnRestart()
@@ -223,7 +227,23 @@ public class LevelController : MonoBehaviour
                 return;
             }
         }
-        OnHome();
+
+        ShowGameComplete();
+    }
+
+    private void ShowGameComplete()
+    {
+        if (gameCompletePopup != null && database != null && ProgressManager.Instance != null)
+        {
+            int totalLevels = database.GetMaxLevelNumber();
+            int totalStars = ProgressManager.Instance.GetTotalStars(totalLevels);
+            int maxStars = totalLevels * 3;
+            gameCompletePopup.ShowComplete(totalStars, maxStars, OnHome);
+        }
+        else
+        {
+            OnHome();
+        }
     }
 
     private void OnHome()
@@ -232,6 +252,36 @@ public class LevelController : MonoBehaviour
         {
             TransitionManager.Instance.LoadScene(menuSceneName);
         }
+    }
+
+    public void TogglePause()
+    {
+        if (levelComplete) return;
+        if (paused) return;
+
+        paused = true;
+        pieceInput.SetInputLocked(true);
+
+        if (pausePopup != null)
+        {
+            pausePopup.Open(ResumeFromPause, RestartFromPause, OnHome);
+        }
+        else
+        {
+            ResumeFromPause();
+        }
+    }
+
+    private void ResumeFromPause()
+    {
+        paused = false;
+        if (!levelComplete) pieceInput.SetInputLocked(false);
+    }
+
+    private void RestartFromPause()
+    {
+        paused = false;
+        LoadCurrentLevel();
     }
 
     public void RestartLevel()
