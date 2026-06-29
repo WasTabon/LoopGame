@@ -10,6 +10,7 @@ public static class PieceSpriteFactory
     private static Sprite cellSprite;
     private static Sprite obstacleSprite;
     private static Sprite startSprite;
+    private static Sprite glowDotSprite;
 
     private static readonly Color PathColor = new Color(0.290f, 0.565f, 0.886f, 1f);
     private static readonly Color StartColor = new Color(0.961f, 0.651f, 0.137f, 1f);
@@ -71,6 +72,39 @@ public static class PieceSpriteFactory
         startSprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
             new Vector2(0.5f, 0.5f), PixelsPerUnit);
         return startSprite;
+    }
+
+    public static Sprite GetGlowDotSprite()
+    {
+        if (glowDotSprite != null) return glowDotSprite;
+
+        Texture2D tex = new Texture2D(TexSize, TexSize, TextureFormat.RGBA32, false);
+        tex.filterMode = FilterMode.Bilinear;
+        tex.wrapMode = TextureWrapMode.Clamp;
+
+        float center = TexSize * 0.5f;
+        float radius = TexSize * 0.5f;
+        Color core = new Color(1f, 0.97f, 0.85f, 1f);
+
+        Color[] pixels = new Color[TexSize * TexSize];
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float dx = x - center;
+                float dy = y - center;
+                float dist = Mathf.Sqrt(dx * dx + dy * dy) / radius;
+                float alpha = Mathf.Clamp01(1f - dist);
+                alpha = alpha * alpha;
+                pixels[y * TexSize + x] = new Color(core.r, core.g, core.b, alpha);
+            }
+        }
+
+        tex.SetPixels(pixels);
+        tex.Apply();
+        glowDotSprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
+            new Vector2(0.5f, 0.5f), PixelsPerUnit);
+        return glowDotSprite;
     }
 
     private static Sprite CreateRoundedSquare(Color color, float cornerFraction)

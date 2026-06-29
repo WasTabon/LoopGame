@@ -10,7 +10,11 @@ public class PathPiece : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Tween rotateTween;
     private Tween scaleTween;
+    private Tween highlightTween;
     private Vector3 baseScale;
+    private Color baseColor = Color.white;
+
+    private static readonly Color HighlightColor = new Color(1f, 0.95f, 0.7f, 1f);
 
     public void Init(PieceType type, int startRotation, bool rotatable)
     {
@@ -22,6 +26,7 @@ public class PathPiece : MonoBehaviour
         if (spriteRenderer == null) spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = PieceSpriteFactory.GetPieceSprite(type);
         spriteRenderer.sortingOrder = 5;
+        baseColor = spriteRenderer.color;
 
         baseScale = transform.localScale;
         transform.localRotation = Quaternion.Euler(0, 0, -90f * rotationSteps);
@@ -65,5 +70,34 @@ public class PathPiece : MonoBehaviour
     public void PlayInvalidFeedback()
     {
         transform.DOShakeRotation(0.3f, new Vector3(0, 0, 12f), 12, 60f);
+    }
+
+    public void HighlightPulse()
+    {
+        highlightTween?.Kill();
+        spriteRenderer.color = HighlightColor;
+        spriteRenderer.sortingOrder = 6;
+        highlightTween = spriteRenderer.DOColor(baseColor, 0.5f).SetEase(Ease.OutQuad)
+            .OnComplete(() => spriteRenderer.sortingOrder = 5);
+
+        scaleTween?.Kill();
+        transform.localScale = baseScale;
+        scaleTween = transform.DOPunchScale(baseScale * 0.22f, 0.4f, 7, 0.7f);
+    }
+
+    public void ResetVisual()
+    {
+        highlightTween?.Kill();
+        scaleTween?.Kill();
+        spriteRenderer.color = baseColor;
+        spriteRenderer.sortingOrder = 5;
+        transform.localScale = baseScale;
+    }
+
+    private void OnDestroy()
+    {
+        rotateTween?.Kill();
+        scaleTween?.Kill();
+        highlightTween?.Kill();
     }
 }

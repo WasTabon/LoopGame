@@ -702,6 +702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 486138011}
   - component: {fileID: 486138010}
+  - component: {fileID: 486138012}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -775,6 +776,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486138012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486138009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224a5cdb4c6a19348911042e23ade631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &557072016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1839,6 +1852,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559941777}
   m_CullTransparentMesh: 1
+--- !u!1 &1688984649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1688984651}
+  - component: {fileID: 1688984650}
+  m_Layer: 0
+  m_Name: LoopFlowAnimator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1688984650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688984649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461d9452dc7ee144fa1f7c9561fa6bcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 1984166818}
+  cellsPerSecond: 7
+  laps: 2
+  highlightWaveStepDelay: 0.06
+--- !u!4 &1688984651
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688984649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1748256276
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,6 +1933,7 @@ MonoBehaviour:
   pieceInput: {fileID: 1451836298}
   hud: {fileID: 557072020}
   winPopup: {fileID: 1898937566}
+  flowAnimator: {fileID: 1688984650}
 --- !u!4 &1748256278
 Transform:
   m_ObjectHideFlags: 0
@@ -2389,7 +2451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.55, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076294, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -0.000061035, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2086782220
@@ -2514,3 +2576,4 @@ SceneRoots:
   - {fileID: 1984166819}
   - {fileID: 1451836299}
   - {fileID: 1748256278}
+  - {fileID: 1688984651}

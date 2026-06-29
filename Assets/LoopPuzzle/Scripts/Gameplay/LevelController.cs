@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class LevelController : MonoBehaviour
     public PieceInput pieceInput;
     public HUDController hud;
     public WinPopup winPopup;
+    public LoopFlowAnimator flowAnimator;
 
     private int moves;
     private bool levelComplete;
@@ -66,10 +68,20 @@ public class LevelController : MonoBehaviour
         if (SoundManager.Instance != null) SoundManager.Instance.PlayWin();
         if (HapticManager.Instance != null) HapticManager.Instance.MediumTap();
 
-        DOVirtual.DelayedCall(0.4f, () =>
+        if (flowAnimator != null)
         {
-            winPopup.ShowWin(moves, OnRestart, OnNext);
-        });
+            List<Cell> orderedCells = LoopPathBuilder.BuildOrderedCells(gridManager, gridManager.StartCell);
+            flowAnimator.Play(orderedCells, ShowWinPopup);
+        }
+        else
+        {
+            DOVirtual.DelayedCall(0.4f, ShowWinPopup);
+        }
+    }
+
+    private void ShowWinPopup()
+    {
+        winPopup.ShowWin(moves, OnRestart, OnNext);
     }
 
     private void OnRestart()
