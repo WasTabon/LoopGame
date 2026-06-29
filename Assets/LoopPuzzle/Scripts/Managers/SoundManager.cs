@@ -17,6 +17,7 @@ public class SoundManager : MonoBehaviour
     private AudioClip clickClip;
     private AudioClip backClip;
     private AudioClip transitionClip;
+    private AudioClip winClip;
 
     private bool sfxMuted;
     private bool musicMuted;
@@ -65,6 +66,29 @@ public class SoundManager : MonoBehaviour
         clickClip = CreateBeep(880f, 0.08f, 0.5f);
         backClip = CreateBeep(440f, 0.08f, 0.5f);
         transitionClip = CreateBeep(620f, 0.12f, 0.4f);
+        winClip = CreateArpeggio(new float[] { 523f, 659f, 784f, 1047f }, 0.10f, 0.45f);
+    }
+
+    private AudioClip CreateArpeggio(float[] frequencies, float noteDuration, float volume)
+    {
+        int sampleRate = 44100;
+        int noteSamples = Mathf.CeilToInt(sampleRate * noteDuration);
+        int totalSamples = noteSamples * frequencies.Length;
+        AudioClip clip = AudioClip.Create("arpeggio", totalSamples, 1, sampleRate, false);
+
+        float[] data = new float[totalSamples];
+        for (int n = 0; n < frequencies.Length; n++)
+        {
+            for (int i = 0; i < noteSamples; i++)
+            {
+                float t = (float)i / sampleRate;
+                float envelope = Mathf.Clamp01(1f - (t / noteDuration));
+                data[n * noteSamples + i] = Mathf.Sin(2f * Mathf.PI * frequencies[n] * t) * volume * envelope;
+            }
+        }
+
+        clip.SetData(data, 0);
+        return clip;
     }
 
     private AudioClip CreateBeep(float frequency, float duration, float volume)
@@ -98,6 +122,11 @@ public class SoundManager : MonoBehaviour
     public void PlayTransition()
     {
         PlaySfx(transitionClip);
+    }
+
+    public void PlayWin()
+    {
+        PlaySfx(winClip);
     }
 
     private void PlaySfx(AudioClip clip)

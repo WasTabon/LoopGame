@@ -5,12 +5,14 @@ public class GridManager : MonoBehaviour
     public LevelData currentLevel;
     public float screenFillFraction = 0.86f;
     public float verticalOffset = 0f;
+    public bool buildOnStart = true;
 
     private Cell[,] cells;
     private float cellWorldSize;
     private int width;
     private int height;
     private Vector3 originPosition;
+    private Cell startCell;
 
     private Transform cellContainer;
     private Transform pieceContainer;
@@ -18,9 +20,11 @@ public class GridManager : MonoBehaviour
     public float CellWorldSize => cellWorldSize;
     public int Width => width;
     public int Height => height;
+    public Cell StartCell => startCell;
 
     private void Start()
     {
+        if (!buildOnStart) return;
         Debug.Assert(currentLevel != null, "GridManager has no level assigned!");
         BuildLevel(currentLevel);
     }
@@ -38,6 +42,7 @@ public class GridManager : MonoBehaviour
         width = level.width;
         height = level.height;
         cells = new Cell[width, height];
+        startCell = null;
 
         ComputeLayout();
         CreateContainers();
@@ -49,6 +54,11 @@ public class GridManager : MonoBehaviour
                 CellDefinition def = level.GetCell(x, y);
                 CreateCell(x, y, def);
             }
+        }
+
+        if (startCell == null)
+        {
+            Debug.LogWarning("Level " + level.name + " has no start cell flagged. Loop check will not run.");
         }
     }
 
@@ -93,6 +103,11 @@ public class GridManager : MonoBehaviour
         Cell cell = cellGo.AddComponent<Cell>();
         cell.Init(x, y, def.cellType, def.isStart, cellWorldSize);
         cells[x, y] = cell;
+
+        if (def.isStart)
+        {
+            startCell = cell;
+        }
 
         if (def.pieceType != PieceType.None && def.cellType != CellType.Obstacle)
         {

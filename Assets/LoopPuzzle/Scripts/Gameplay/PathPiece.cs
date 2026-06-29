@@ -41,16 +41,21 @@ public class PathPiece : MonoBehaviour
         return PieceConnections.GetRotatedConnections(pieceType, rotationSteps);
     }
 
-    public void Rotate()
+    public void Rotate(System.Action onComplete = null)
     {
-        if (!canRotate) return;
+        if (!canRotate)
+        {
+            onComplete?.Invoke();
+            return;
+        }
 
         rotationSteps = (rotationSteps + 1) % 4;
         float targetZ = -90f * rotationSteps;
 
         rotateTween?.Kill();
         rotateTween = transform.DORotate(new Vector3(0, 0, targetZ), 0.22f, RotateMode.Fast)
-            .SetEase(Ease.OutBack);
+            .SetEase(Ease.OutBack)
+            .OnComplete(() => onComplete?.Invoke());
 
         scaleTween?.Kill();
         transform.localScale = baseScale;

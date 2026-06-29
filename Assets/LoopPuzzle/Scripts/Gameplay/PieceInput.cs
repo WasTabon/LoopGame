@@ -4,10 +4,12 @@ using UnityEngine.EventSystems;
 public class PieceInput : MonoBehaviour
 {
     public GridManager gridManager;
+    public LevelController levelController;
 
     private Camera cam;
     private Vector2 pressPosition;
     private bool pressing;
+    private bool inputLocked;
     private const float TapMoveThreshold = 20f;
 
     private void Start()
@@ -16,8 +18,15 @@ public class PieceInput : MonoBehaviour
         Debug.Assert(gridManager != null, "PieceInput has no GridManager assigned!");
     }
 
+    public void SetInputLocked(bool locked)
+    {
+        inputLocked = locked;
+    }
+
     private void Update()
     {
+        if (inputLocked) return;
+
         if (Input.GetMouseButtonDown(0))
         {
             if (IsPointerOverUI()) return;
@@ -47,14 +56,27 @@ public class PieceInput : MonoBehaviour
 
         if (piece.canRotate)
         {
-            piece.Rotate();
+            piece.Rotate(OnRotationComplete);
             if (SoundManager.Instance != null) SoundManager.Instance.PlayClick();
             if (HapticManager.Instance != null) HapticManager.Instance.LightTap();
+
+            if (levelController != null)
+            {
+                levelController.RegisterMove();
+            }
         }
         else
         {
             piece.PlayInvalidFeedback();
             if (SoundManager.Instance != null) SoundManager.Instance.PlayBack();
+        }
+    }
+
+    private void OnRotationComplete()
+    {
+        if (levelController != null)
+        {
+            levelController.CheckForWin();
         }
     }
 
