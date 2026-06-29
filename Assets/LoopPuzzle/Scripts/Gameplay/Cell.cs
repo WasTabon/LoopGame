@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class Cell : MonoBehaviour
@@ -68,7 +69,17 @@ public class Cell : MonoBehaviour
         Sprite sprite = startMarker.sprite;
         float spriteWorldSize = sprite.bounds.size.x;
         float factor = worldSize / spriteWorldSize;
-        markerGo.transform.localScale = new Vector3(factor, factor, 1f);
+        Vector3 markerScale = new Vector3(factor, factor, 1f);
+        markerGo.transform.localScale = markerScale;
+
+        markerGo.transform.DOScale(markerScale * 1.12f, 1.1f)
+            .SetEase(Ease.InOutSine)
+            .SetLoops(-1, LoopType.Yoyo);
+    }
+
+    private void OnDestroy()
+    {
+        if (startMarker != null) startMarker.transform.DOKill();
     }
 
     private void SetScale(float worldSize)

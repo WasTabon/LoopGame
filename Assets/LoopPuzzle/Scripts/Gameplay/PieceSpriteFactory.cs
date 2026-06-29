@@ -13,6 +13,9 @@ public static class PieceSpriteFactory
     private static Sprite glowDotSprite;
     private static Sprite rotationArrowSprite;
     private static Sprite tapPointerSprite;
+    private static Sprite starFilledSprite;
+    private static Sprite starEmptySprite;
+    private static Sprite lockSprite;
 
     private static readonly Color PathColor = new Color(0.290f, 0.565f, 0.886f, 1f);
     private static readonly Color StartColor = new Color(0.961f, 0.651f, 0.137f, 1f);
@@ -27,19 +30,42 @@ public static class PieceSpriteFactory
 
         Color[] pixels = new Color[TexSize * TexSize];
         for (int i = 0; i < pixels.Length; i++) pixels[i] = Color.clear;
-        tex.SetPixels(pixels);
 
         bool[] conn = PieceConnections.GetBaseConnections(type);
-        float thickness = TexSize * 0.22f;
+        float thickness = TexSize * 0.24f;
         float center = TexSize * 0.5f;
+        float half = thickness * 0.5f;
 
-        DrawDot(tex, (int)center, (int)center, thickness * 0.62f, PathColor);
+        Color baseCol = PathColor;
+        Color highlightCol = new Color(
+            Mathf.Min(1f, PathColor.r + 0.22f),
+            Mathf.Min(1f, PathColor.g + 0.20f),
+            Mathf.Min(1f, PathColor.b + 0.16f), 1f);
 
-        if (conn[(int)Direction.North]) DrawArm(tex, center, center, center, TexSize, thickness, PathColor);
-        if (conn[(int)Direction.South]) DrawArm(tex, center, center, center, 0, thickness, PathColor);
-        if (conn[(int)Direction.East]) DrawArm(tex, center, center, TexSize, center, thickness, PathColor);
-        if (conn[(int)Direction.West]) DrawArm(tex, center, center, 0, center, thickness, PathColor);
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float d = float.MaxValue;
+                d = Mathf.Min(d, DistanceToSegment(x, y, center, center, center, center));
+                if (conn[(int)Direction.North]) d = Mathf.Min(d, DistanceToSegment(x, y, center, center, center, TexSize));
+                if (conn[(int)Direction.South]) d = Mathf.Min(d, DistanceToSegment(x, y, center, center, center, 0));
+                if (conn[(int)Direction.East]) d = Mathf.Min(d, DistanceToSegment(x, y, center, center, TexSize, center));
+                if (conn[(int)Direction.West]) d = Mathf.Min(d, DistanceToSegment(x, y, center, center, 0, center));
 
+                float edge = half - d;
+                if (edge <= -1.5f) continue;
+
+                float alpha = Mathf.Clamp01((edge + 1.5f) / 3f);
+
+                float depth = Mathf.Clamp01(d / half);
+                Color col = Color.Lerp(highlightCol, baseCol, depth);
+
+                pixels[y * TexSize + x] = new Color(col.r, col.g, col.b, alpha);
+            }
+        }
+
+        tex.SetPixels(pixels);
         tex.Apply();
 
         Sprite sprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
@@ -217,6 +243,170 @@ public static class PieceSpriteFactory
         tapPointerSprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
             new Vector2(0.5f, 0.5f), PixelsPerUnit);
         return tapPointerSprite;
+    }
+
+    public static Sprite GetStarSprite(bool filled)
+    {
+        if (filled && starFilledSprite != null) return starFilledSprite;
+        if (!filled && starEmptySprite != null) return starEmptySprite;
+
+        Texture2D tex = new Texture2D(TexSize, TexSize, TextureFormat.RGBA32, false);
+        tex.filterMode = FilterMode.Bilinear;
+        tex.wrapMode = TextureWrapMode.Clamp;
+
+        Color[] pixels = new Color[TexSize * TexSize];
+        for (int i = 0; i < pixels.Length; i++) pixels[i] = new Color(0, 0, 0, 0);
+
+        float center = TexSize * 0.5f;
+        float outer = TexSize * 0.44f;
+        float inner = outer * 0.42f;
+
+        Vector2[] points = new Vector2[10];
+        for (int i = 0; i < 10; i++)
+        {
+            float ang = Mathf.Deg2Rad * (90f + i * 36f);
+            float r = (i % 2 == 0) ? outer : inner;
+            points[i] = new Vector2(center + Mathf.Cos(ang) * r, center + Mathf.Sin(ang) * r);
+        }
+
+        Color fillCol = filled ? new Color(0.984f, 0.741f, 0.243f, 1f) : new Color(1f, 1f, 1f, 0.16f);
+        Color edgeCol = filled ? new Color(0.961f, 0.561f, 0.110f, 1f) : new Color(1f, 1f, 1f, 0.22f);
+
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                if (PointInPolygon(x + 0.5f, y + 0.5f, points))
+                {
+                    float dEdge = DistanceToPolygonEdge(x + 0.5f, y + 0.5f, points);
+                    Color c = dEdge < 6f ? edgeCol : fillCol;
+                    float aa = Mathf.Clamp01(dEdge / 1.5f + 0.3f);
+                    pixels[y * TexSize + x] = new Color(c.r, c.g, c.b, c.a * Mathf.Clamp01(aa));
+                }
+            }
+        }
+
+        tex.SetPixels(pixels);
+        tex.Apply();
+        Sprite sprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
+            new Vector2(0.5f, 0.5f), PixelsPerUnit);
+        if (filled) starFilledSprite = sprite; else starEmptySprite = sprite;
+        return sprite;
+    }
+
+    public static Sprite GetLockSprite()
+    {
+        if (lockSprite != null) return lockSprite;
+
+        Texture2D tex = new Texture2D(TexSize, TexSize, TextureFormat.RGBA32, false);
+        tex.filterMode = FilterMode.Bilinear;
+        tex.wrapMode = TextureWrapMode.Clamp;
+
+        Color[] pixels = new Color[TexSize * TexSize];
+        for (int i = 0; i < pixels.Length; i++) pixels[i] = new Color(0, 0, 0, 0);
+
+        Color body = new Color(0.85f, 0.85f, 0.92f, 0.9f);
+        float cx = TexSize * 0.5f;
+
+        float bodyLeft = TexSize * 0.30f;
+        float bodyRight = TexSize * 0.70f;
+        float bodyBottom = TexSize * 0.20f;
+        float bodyTop = TexSize * 0.52f;
+        float bodyRadius = TexSize * 0.06f;
+
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                bool inBody = IsInsideRoundedRectRegion(x, y, bodyLeft, bodyRight, bodyBottom, bodyTop, bodyRadius);
+                if (inBody)
+                {
+                    pixels[y * TexSize + x] = body;
+                }
+            }
+        }
+
+        float shackleCenterY = bodyTop;
+        float shackleOuter = TexSize * 0.16f;
+        float shackleInner = TexSize * 0.10f;
+        float shackleThickness = (shackleOuter - shackleInner);
+
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float dx = x - cx;
+                float dy = y - shackleCenterY;
+                if (dy < 0) continue;
+                float dist = Mathf.Sqrt(dx * dx + dy * dy);
+                float ringCenter = (shackleOuter + shackleInner) * 0.5f;
+                if (Mathf.Abs(dist - ringCenter) <= shackleThickness * 0.5f)
+                {
+                    pixels[y * TexSize + x] = body;
+                }
+            }
+        }
+
+        Color keyhole = new Color(0.25f, 0.25f, 0.32f, 1f);
+        float khY = (bodyBottom + bodyTop) * 0.5f;
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float dx = x - cx;
+                float dy = y - khY;
+                if (dx * dx + dy * dy <= (TexSize * 0.045f) * (TexSize * 0.045f))
+                {
+                    pixels[y * TexSize + x] = keyhole;
+                }
+            }
+        }
+
+        tex.SetPixels(pixels);
+        tex.Apply();
+        lockSprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
+            new Vector2(0.5f, 0.5f), PixelsPerUnit);
+        return lockSprite;
+    }
+
+    private static bool IsInsideRoundedRectRegion(int x, int y, float left, float right, float bottom, float top, float radius)
+    {
+        float cx = Mathf.Clamp(x, left + radius, right - radius);
+        float cy = Mathf.Clamp(y, bottom + radius, top - radius);
+        if (x >= left + radius && x <= right - radius && y >= bottom && y <= top) return true;
+        if (y >= bottom + radius && y <= top - radius && x >= left && x <= right) return true;
+        float dx = x - cx;
+        float dy = y - cy;
+        return (dx * dx + dy * dy) <= radius * radius;
+    }
+
+    private static bool PointInPolygon(float px, float py, Vector2[] poly)
+    {
+        bool inside = false;
+        int j = poly.Length - 1;
+        for (int i = 0; i < poly.Length; i++)
+        {
+            if (((poly[i].y > py) != (poly[j].y > py)) &&
+                (px < (poly[j].x - poly[i].x) * (py - poly[i].y) / (poly[j].y - poly[i].y) + poly[i].x))
+            {
+                inside = !inside;
+            }
+            j = i;
+        }
+        return inside;
+    }
+
+    private static float DistanceToPolygonEdge(float px, float py, Vector2[] poly)
+    {
+        float min = float.MaxValue;
+        int j = poly.Length - 1;
+        for (int i = 0; i < poly.Length; i++)
+        {
+            float d = DistanceToSegment(px, py, poly[j].x, poly[j].y, poly[i].x, poly[i].y);
+            if (d < min) min = d;
+            j = i;
+        }
+        return min;
     }
 
     private static Sprite CreateRoundedSquare(Color color, float cornerFraction)

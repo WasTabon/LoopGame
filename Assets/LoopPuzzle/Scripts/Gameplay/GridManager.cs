@@ -60,6 +60,30 @@ public class GridManager : MonoBehaviour
         {
             Debug.LogWarning("Level " + level.name + " has no start cell flagged. Loop check will not run.");
         }
+
+        PlayEntranceCascade();
+    }
+
+    private void PlayEntranceCascade()
+    {
+        float centerX = (width - 1) * 0.5f;
+        float centerY = (height - 1) * 0.5f;
+        float maxDist = Mathf.Sqrt(centerX * centerX + centerY * centerY) + 0.001f;
+
+        for (int y = 0; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                Cell cell = cells[x, y];
+                if (cell == null || cell.currentPiece == null) continue;
+
+                float dx = x - centerX;
+                float dy = y - centerY;
+                float dist = Mathf.Sqrt(dx * dx + dy * dy);
+                float delay = (dist / maxDist) * 0.35f;
+                cell.currentPiece.PlayEntrance(delay);
+            }
+        }
     }
 
     private void ComputeLayout()
@@ -126,6 +150,11 @@ public class GridManager : MonoBehaviour
         PathPiece piece = pieceGo.AddComponent<PathPiece>();
         piece.Init(def.pieceType, def.rotationSteps, rotatable);
         piece.SetScale(cellWorldSize * 0.92f);
+
+        if (def.cellType == CellType.Fixed)
+        {
+            piece.ApplyFixedTint();
+        }
 
         cell.SetPiece(piece);
     }

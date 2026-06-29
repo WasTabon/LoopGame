@@ -121,23 +121,29 @@ public class LoopFlowAnimator : MonoBehaviour
         dotRenderer.sortingOrder = 20;
 
         trail = glowDotGo.AddComponent<TrailRenderer>();
-        trail.time = 0.35f;
+        trail.time = 0.4f;
         trail.minVertexDistance = 0.02f;
-        trail.numCapVertices = 4;
-        trail.numCornerVertices = 4;
+        trail.numCapVertices = 6;
+        trail.numCornerVertices = 6;
         trail.material = new Material(Shader.Find("Sprites/Default"));
         trail.sortingOrder = 19;
+
+        AnimationCurve widthCurve = new AnimationCurve();
+        widthCurve.AddKey(0f, 1f);
+        widthCurve.AddKey(1f, 0f);
+        trail.widthCurve = widthCurve;
+        trail.widthMultiplier = 0.32f;
 
         Gradient gradient = new Gradient();
         gradient.SetKeys(
             new GradientColorKey[]
             {
-                new GradientColorKey(new Color(1f, 0.85f, 0.4f), 0f),
+                new GradientColorKey(new Color(1f, 0.9f, 0.55f), 0f),
                 new GradientColorKey(new Color(0.96f, 0.65f, 0.14f), 1f)
             },
             new GradientAlphaKey[]
             {
-                new GradientAlphaKey(1f, 0f),
+                new GradientAlphaKey(0.95f, 0f),
                 new GradientAlphaKey(0f, 1f)
             });
         trail.colorGradient = gradient;
@@ -152,15 +158,16 @@ public class LoopFlowAnimator : MonoBehaviour
 
         burstParticles = burstGo.AddComponent<ParticleSystem>();
         var main = burstParticles.main;
-        main.duration = 1f;
+        main.duration = 1.2f;
         main.loop = false;
-        main.startLifetime = 0.7f;
-        main.startSpeed = 4f;
-        main.startSize = 0.18f;
-        main.startColor = new Color(1f, 0.8f, 0.3f, 1f);
-        main.maxParticles = 80;
+        main.startLifetime = 0.9f;
+        main.startSpeed = 4.5f;
+        main.startSize = 0.22f;
+        main.startColor = new Color(1f, 0.82f, 0.35f, 1f);
+        main.maxParticles = 120;
         main.playOnAwake = false;
         main.simulationSpace = ParticleSystemSimulationSpace.World;
+        main.gravityModifier = 0.15f;
 
         var emission = burstParticles.emission;
         emission.enabled = true;
@@ -169,10 +176,36 @@ public class LoopFlowAnimator : MonoBehaviour
         var shape = burstParticles.shape;
         shape.enabled = true;
         shape.shapeType = ParticleSystemShapeType.Circle;
-        shape.radius = 0.1f;
+        shape.radius = 0.12f;
+
+        var sizeOverLifetime = burstParticles.sizeOverLifetime;
+        sizeOverLifetime.enabled = true;
+        AnimationCurve sizeCurve = new AnimationCurve();
+        sizeCurve.AddKey(0f, 1f);
+        sizeCurve.AddKey(1f, 0f);
+        sizeOverLifetime.size = new ParticleSystem.MinMaxCurve(1f, sizeCurve);
+
+        var colorOverLifetime = burstParticles.colorOverLifetime;
+        colorOverLifetime.enabled = true;
+        Gradient grad = new Gradient();
+        grad.SetKeys(
+            new GradientColorKey[]
+            {
+                new GradientColorKey(new Color(1f, 0.9f, 0.5f), 0f),
+                new GradientColorKey(new Color(0.961f, 0.651f, 0.137f), 1f)
+            },
+            new GradientAlphaKey[]
+            {
+                new GradientAlphaKey(1f, 0f),
+                new GradientAlphaKey(0f, 1f)
+            });
+        colorOverLifetime.color = grad;
 
         var renderer = burstGo.GetComponent<ParticleSystemRenderer>();
-        renderer.material = new Material(Shader.Find("Sprites/Default"));
+        Material mat = new Material(Shader.Find("Sprites/Default"));
+        Sprite glow = PieceSpriteFactory.GetGlowDotSprite();
+        if (glow != null) mat.mainTexture = glow.texture;
+        renderer.material = mat;
         renderer.sortingOrder = 25;
 
         burstGo.SetActive(true);
@@ -185,6 +218,6 @@ public class LoopFlowAnimator : MonoBehaviour
         center /= points.Count;
 
         burstParticles.transform.position = center;
-        burstParticles.Emit(60);
+        burstParticles.Emit(90);
     }
 }

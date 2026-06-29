@@ -140,33 +140,31 @@ public class LevelSelectController : MonoBehaviour
         hlg.childControlHeight = false;
 
         StarDisplay starDisplay = starsGo.AddComponent<StarDisplay>();
-        starDisplay.stars = new TextMeshProUGUI[3];
+        starDisplay.starImages = new Image[3];
         for (int i = 0; i < 3; i++)
         {
             GameObject starGo = new GameObject("Star" + i);
             starGo.transform.SetParent(starsGo.transform, false);
-            TextMeshProUGUI starTmp = starGo.AddComponent<TextMeshProUGUI>();
-            starTmp.text = "*";
-            starTmp.fontSize = 30;
-            starTmp.alignment = TextAlignmentOptions.Center;
-            starTmp.fontStyle = FontStyles.Bold;
-            RectTransform sRt = starTmp.rectTransform;
-            sRt.sizeDelta = new Vector2(28, 28);
-            starDisplay.stars[i] = starTmp;
+            Image starImg = starGo.AddComponent<Image>();
+            starImg.sprite = PieceSpriteFactory.GetStarSprite(false);
+            starImg.preserveAspect = true;
+            RectTransform sRt = starImg.rectTransform;
+            sRt.sizeDelta = new Vector2(34, 34);
+            starDisplay.starImages[i] = starImg;
         }
 
         GameObject lockGo = new GameObject("Lock");
         lockGo.transform.SetParent(btnGo.transform, false);
-        TextMeshProUGUI lockTmp = lockGo.AddComponent<TextMeshProUGUI>();
-        lockTmp.text = "X";
-        lockTmp.fontSize = 60;
-        lockTmp.color = new Color(1f, 1f, 1f, 0.5f);
-        lockTmp.alignment = TextAlignmentOptions.Center;
-        RectTransform lockRt = lockTmp.rectTransform;
-        lockRt.anchorMin = Vector2.zero;
-        lockRt.anchorMax = Vector2.one;
-        lockRt.offsetMin = Vector2.zero;
-        lockRt.offsetMax = Vector2.zero;
+        Image lockImg = lockGo.AddComponent<Image>();
+        lockImg.sprite = PieceSpriteFactory.GetLockSprite();
+        lockImg.preserveAspect = true;
+        lockImg.color = new Color(1f, 1f, 1f, 0.85f);
+        RectTransform lockRt = lockImg.rectTransform;
+        lockRt.anchorMin = new Vector2(0.5f, 0.5f);
+        lockRt.anchorMax = new Vector2(0.5f, 0.5f);
+        lockRt.pivot = new Vector2(0.5f, 0.5f);
+        lockRt.sizeDelta = new Vector2(90, 90);
+        lockRt.anchoredPosition = Vector2.zero;
 
         lb.numberText = numTmp;
         lb.starDisplay = starDisplay;

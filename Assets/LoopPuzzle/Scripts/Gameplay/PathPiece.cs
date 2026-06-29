@@ -41,6 +41,23 @@ public class PathPiece : MonoBehaviour
         transform.localScale = baseScale;
     }
 
+    public void ApplyFixedTint()
+    {
+        if (spriteRenderer == null) return;
+        baseColor = new Color(0.62f, 0.66f, 0.78f, 1f);
+        spriteRenderer.color = baseColor;
+    }
+
+    public void PlayEntrance(float delay)
+    {
+        scaleTween?.Kill();
+        Vector3 target = baseScale;
+        transform.localScale = Vector3.zero;
+        scaleTween = transform.DOScale(target, 0.4f)
+            .SetEase(Ease.OutBack)
+            .SetDelay(delay);
+    }
+
     public bool[] GetConnections()
     {
         return PieceConnections.GetRotatedConnections(pieceType, rotationSteps);
