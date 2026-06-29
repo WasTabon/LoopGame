@@ -151,7 +151,14 @@ public class GridManager : MonoBehaviour
         piece.Init(def.pieceType, def.rotationSteps, rotatable);
         piece.SetScale(cellWorldSize * 0.92f);
 
-        if (def.cellType == CellType.Fixed)
+        piece.maxRotations = def.maxRotations;
+        piece.directional = def.directional;
+
+        if (def.color != PieceColor.Neutral)
+        {
+            piece.ApplyColor(def.color);
+        }
+        else if (def.cellType == CellType.Fixed)
         {
             piece.ApplyFixedTint();
         }

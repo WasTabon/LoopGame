@@ -159,9 +159,19 @@ public class LevelController : MonoBehaviour
     {
         if (levelComplete) return;
 
-        int required = currentLevel != null ? currentLevel.requiredLoops : 1;
-        LoopResult result = LoopValidator.Validate(gridManager, gridManager.StartCell, required);
-        if (result.isLoopClosed)
+        bool won;
+        if (currentLevel != null && currentLevel.colorLoopsMode)
+        {
+            won = LoopValidator.ValidateColorLoops(gridManager);
+        }
+        else
+        {
+            int required = currentLevel != null ? currentLevel.requiredLoops : 1;
+            LoopResult result = LoopValidator.Validate(gridManager, gridManager.StartCell, required);
+            won = result.isLoopClosed;
+        }
+
+        if (won)
         {
             HandleWin();
         }

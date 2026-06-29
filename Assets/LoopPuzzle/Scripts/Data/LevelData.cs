@@ -7,6 +7,11 @@ public class CellDefinition
     public PieceType pieceType = PieceType.None;
     public int rotationSteps = 0;
     public bool isStart = false;
+
+    public PieceColor color = PieceColor.Neutral;
+    public int portalId = 0;
+    public int maxRotations = 0;
+    public bool directional = false;
 }
 
 [System.Serializable]
@@ -16,6 +21,7 @@ public class SolutionEntry
     public int ty;
     public PieceType pieceType = PieceType.None;
     public int rotationSteps = 0;
+    public PieceColor color = PieceColor.Neutral;
 }
 
 [CreateAssetMenu(fileName = "Level", menuName = "Loop Puzzle/Level Data")]
@@ -30,6 +36,9 @@ public class LevelData : ScriptableObject
     public int world = 1;
     public int parMoves = 10;
     public int requiredLoops = 1;
+
+    public bool colorLoopsMode = false;
+    public bool coverAllMode = false;
 
     public SolutionEntry[] solution;
 

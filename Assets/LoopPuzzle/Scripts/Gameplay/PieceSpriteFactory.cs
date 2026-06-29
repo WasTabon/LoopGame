@@ -24,6 +24,13 @@ public static class PieceSpriteFactory
     {
         if (cache.TryGetValue(type, out Sprite cached)) return cached;
 
+        if (type == PieceType.Bridge)
+        {
+            Sprite bridge = BuildBridgeSprite();
+            cache[type] = bridge;
+            return bridge;
+        }
+
         Texture2D tex = new Texture2D(TexSize, TexSize, TextureFormat.RGBA32, false);
         tex.filterMode = FilterMode.Bilinear;
         tex.wrapMode = TextureWrapMode.Clamp;
@@ -79,6 +86,59 @@ public static class PieceSpriteFactory
         if (cellSprite != null) return cellSprite;
         cellSprite = CreateRoundedSquare(new Color(1f, 1f, 1f, 1f), 0.18f);
         return cellSprite;
+    }
+
+    private static Sprite BuildBridgeSprite()
+    {
+        Texture2D tex = new Texture2D(TexSize, TexSize, TextureFormat.RGBA32, false);
+        tex.filterMode = FilterMode.Bilinear;
+        tex.wrapMode = TextureWrapMode.Clamp;
+
+        Color[] pixels = new Color[TexSize * TexSize];
+        for (int i = 0; i < pixels.Length; i++) pixels[i] = Color.clear;
+
+        float center = TexSize * 0.5f;
+        float thickness = TexSize * 0.20f;
+        float half = thickness * 0.5f;
+        float gap = TexSize * 0.16f;
+
+        Color baseCol = PathColor;
+        Color highlightCol = new Color(
+            Mathf.Min(1f, PathColor.r + 0.22f),
+            Mathf.Min(1f, PathColor.g + 0.20f),
+            Mathf.Min(1f, PathColor.b + 0.16f), 1f);
+
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float dVert = Mathf.Abs(x - center);
+                float dHorizUnbroken = Mathf.Abs(y - center);
+
+                bool onVertical = dVert <= half;
+                bool onHorizontal = dHorizUnbroken <= half && Mathf.Abs(x - center) > gap;
+
+                if (onVertical)
+                {
+                    float depth = Mathf.Clamp01(dVert / half);
+                    Color col = Color.Lerp(highlightCol, baseCol, depth);
+                    float alpha = Mathf.Clamp01((half - dVert + 1.5f) / 3f);
+                    pixels[y * TexSize + x] = new Color(col.r, col.g, col.b, alpha);
+                }
+                else if (onHorizontal)
+                {
+                    float depth = Mathf.Clamp01(dHorizUnbroken / half);
+                    Color col = Color.Lerp(highlightCol, baseCol, depth);
+                    float alpha = Mathf.Clamp01((half - dHorizUnbroken + 1.5f) / 3f);
+                    pixels[y * TexSize + x] = new Color(col.r, col.g, col.b, alpha);
+                }
+            }
+        }
+
+        tex.SetPixels(pixels);
+        tex.Apply();
+        return Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
+            new Vector2(0.5f, 0.5f), PixelsPerUnit);
     }
 
     public static Sprite GetStartMarkerSprite()

@@ -134,6 +134,7 @@ public static class LevelValidator
             case PieceType.Corner: baseC[0] = true; baseC[1] = true; break;
             case PieceType.Triple: baseC[0] = true; baseC[1] = true; baseC[3] = true; break;
             case PieceType.Cross: baseC[0] = true; baseC[1] = true; baseC[2] = true; baseC[3] = true; break;
+            case PieceType.Bridge: baseC[0] = true; baseC[1] = true; baseC[2] = true; baseC[3] = true; break;
         }
         int s = ((steps % 4) + 4) % 4;
         bool[] rot = new bool[4];

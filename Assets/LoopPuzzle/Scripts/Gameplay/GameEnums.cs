@@ -4,7 +4,9 @@ public enum CellType
     Fixed,
     Movable,
     Obstacle,
-    Start
+    Start,
+    Portal,
+    Breakable
 }
 
 public enum PieceType
@@ -13,7 +15,8 @@ public enum PieceType
     Straight,
     Corner,
     Triple,
-    Cross
+    Cross,
+    Bridge
 }
 
 public enum Direction
@@ -22,4 +25,13 @@ public enum Direction
     East = 1,
     South = 2,
     West = 3
+}
+
+public enum PieceColor
+{
+    Neutral = 0,
+    Red = 1,
+    Blue = 2,
+    Green = 3,
+    Yellow = 4
 }

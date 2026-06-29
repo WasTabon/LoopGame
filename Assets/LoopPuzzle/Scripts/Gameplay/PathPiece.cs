@@ -6,6 +6,9 @@ public class PathPiece : MonoBehaviour
     public PieceType pieceType;
     public int rotationSteps;
     public bool canRotate = true;
+    public PieceColor pieceColor = PieceColor.Neutral;
+    public int maxRotations = 0;
+    public bool directional = false;
 
     private SpriteRenderer spriteRenderer;
     private Tween rotateTween;
@@ -13,6 +16,7 @@ public class PathPiece : MonoBehaviour
     private Tween highlightTween;
     private Vector3 baseScale;
     private Color baseColor = Color.white;
+    private int rotationsUsed = 0;
 
     private static readonly Color HighlightColor = new Color(1f, 0.95f, 0.7f, 1f);
 
@@ -30,6 +34,34 @@ public class PathPiece : MonoBehaviour
 
         baseScale = transform.localScale;
         transform.localRotation = Quaternion.Euler(0, 0, -90f * rotationSteps);
+    }
+
+    public void ApplyColor(PieceColor color)
+    {
+        pieceColor = color;
+        if (color == PieceColor.Neutral) return;
+        if (spriteRenderer == null) return;
+        baseColor = GetColorValue(color);
+        spriteRenderer.color = baseColor;
+    }
+
+    public static Color GetColorValue(PieceColor color)
+    {
+        switch (color)
+        {
+            case PieceColor.Red: return new Color(0.906f, 0.337f, 0.337f, 1f);
+            case PieceColor.Blue: return new Color(0.290f, 0.565f, 0.886f, 1f);
+            case PieceColor.Green: return new Color(0.298f, 0.733f, 0.396f, 1f);
+            case PieceColor.Yellow: return new Color(0.961f, 0.769f, 0.180f, 1f);
+        }
+        return Color.white;
+    }
+
+    public bool CanStillRotate()
+    {
+        if (!canRotate) return false;
+        if (maxRotations <= 0) return true;
+        return rotationsUsed < maxRotations;
     }
 
     public void SetScale(float worldSize)
@@ -71,6 +103,7 @@ public class PathPiece : MonoBehaviour
             return;
         }
 
+        rotationsUsed++;
         rotationSteps = (rotationSteps + 1) % 4;
         float targetZ = -90f * rotationSteps;
 

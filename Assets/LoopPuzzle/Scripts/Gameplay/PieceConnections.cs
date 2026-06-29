@@ -27,6 +27,12 @@ public static class PieceConnections
                 c[(int)Direction.South] = true;
                 c[(int)Direction.West] = true;
                 break;
+            case PieceType.Bridge:
+                c[(int)Direction.North] = true;
+                c[(int)Direction.East] = true;
+                c[(int)Direction.South] = true;
+                c[(int)Direction.West] = true;
+                break;
         }
 
         return c;
@@ -45,6 +51,20 @@ public static class PieceConnections
         }
 
         return rotated;
+    }
+
+    public static bool IsChannelLinked(PieceType type, int rotationSteps, Direction enter, Direction exit)
+    {
+        bool[] conn = GetRotatedConnections(type, rotationSteps);
+        if (!conn[(int)enter] || !conn[(int)exit]) return false;
+        if (enter == exit) return false;
+
+        if (type == PieceType.Bridge)
+        {
+            return exit == Opposite(enter);
+        }
+
+        return true;
     }
 
     public static Direction Opposite(Direction dir)

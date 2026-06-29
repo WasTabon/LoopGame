@@ -27,6 +27,41 @@ public static class LoopValidator
         return result;
     }
 
+    public static bool ValidateColorLoops(GridManager grid)
+    {
+        HashSet<PieceColor> colorsPresent = new HashSet<PieceColor>();
+        grid.ForEachCell(cell =>
+        {
+            if (cell.currentPiece != null && cell.currentPiece.pieceColor != PieceColor.Neutral)
+            {
+                colorsPresent.Add(cell.currentPiece.pieceColor);
+            }
+        });
+
+        if (colorsPresent.Count == 0)
+        {
+            return ValidateAllLoops(grid).closedLoopCount >= 1;
+        }
+
+        LoopResult all = ValidateAllLoops(grid);
+        if (all.closedLoopCount == 0) return false;
+
+        HashSet<PieceColor> colorsWithLoop = new HashSet<PieceColor>();
+        foreach (Cell c in all.loopCells)
+        {
+            if (c.currentPiece != null)
+            {
+                colorsWithLoop.Add(c.currentPiece.pieceColor);
+            }
+        }
+
+        foreach (PieceColor needed in colorsPresent)
+        {
+            if (!colorsWithLoop.Contains(needed)) return false;
+        }
+        return true;
+    }
+
     public static LoopResult ValidateAllLoops(GridManager grid)
     {
         LoopResult result = new LoopResult();
@@ -104,7 +139,15 @@ public static class LoopValidator
 
         bool[] neighborConn = neighbor.currentPiece.GetConnections();
         Direction opposite = PieceConnections.Opposite(dir);
-        return neighborConn[(int)opposite];
+        if (!neighborConn[(int)opposite]) return false;
+
+        return ColorsCompatible(cell.currentPiece.pieceColor, neighbor.currentPiece.pieceColor);
+    }
+
+    private static bool ColorsCompatible(PieceColor a, PieceColor b)
+    {
+        if (a == PieceColor.Neutral || b == PieceColor.Neutral) return true;
+        return a == b;
     }
 
     private static Cell GetNeighbor(GridManager grid, Cell cell, Direction dir)
