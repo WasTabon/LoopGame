@@ -80,3 +80,6 @@ MonoBehaviour:
     rotationSteps: 0
     isStart: 0
   levelNumber: 1
+  world: 1
+  parMoves: 8
+  requiredLoops: 1

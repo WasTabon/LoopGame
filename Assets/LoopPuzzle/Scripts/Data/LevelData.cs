@@ -18,6 +18,9 @@ public class LevelData : ScriptableObject
     public CellDefinition[] cells;
 
     public int levelNumber = 1;
+    public int world = 1;
+    public int parMoves = 10;
+    public int requiredLoops = 1;
 
     public CellDefinition GetCell(int x, int y)
     {

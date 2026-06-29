@@ -10,6 +10,7 @@ public class MainMenuController : MonoBehaviour
     public RectTransform settingsButton;
 
     public string gameSceneName = "Game";
+    public string levelSelectSceneName = "LevelSelect";
 
     private void Start()
     {
@@ -43,12 +44,14 @@ public class MainMenuController : MonoBehaviour
 
     private void OnPlayClicked()
     {
+        int resume = ProgressManager.Instance != null ? ProgressManager.Instance.GetMaxUnlockedLevel() : 1;
+        GameSession.RequestedLevelNumber = resume;
         TransitionManager.Instance.LoadScene(gameSceneName);
     }
 
     private void OnLevelsClicked()
     {
-        TransitionManager.Instance.LoadScene(gameSceneName);
+        TransitionManager.Instance.LoadScene(levelSelectSceneName);
     }
 
     private void OnSettingsClicked()

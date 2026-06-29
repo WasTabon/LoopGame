@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a476f91be1dd2c42ba8fa0a48725228, type: 3}
-  m_Name: Level_04
+  m_Name: Level_05
   m_EditorClassIdentifier: 
   width: 5
   height: 5
@@ -41,10 +41,30 @@ MonoBehaviour:
     isStart: 0
   - cellType: 2
     pieceType: 2
-    rotationSteps: 1
+    rotationSteps: 2
     isStart: 1
   - cellType: 2
     pieceType: 1
+    rotationSteps: 3
+    isStart: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 1
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 2
+    isStart: 0
+  - cellType: 2
+    pieceType: 2
     rotationSteps: 2
     isStart: 0
   - cellType: 2
@@ -58,41 +78,13 @@ MonoBehaviour:
   - cellType: 0
     pieceType: 0
     rotationSteps: 0
-    isStart: 0
-  - cellType: 2
-    pieceType: 1
-    rotationSteps: 1
-    isStart: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-  - cellType: 2
-    pieceType: 1
-    rotationSteps: 1
-    isStart: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-  - cellType: 2
-    pieceType: 2
-    rotationSteps: 2
-    isStart: 0
-  - cellType: 2
-    pieceType: 1
-    rotationSteps: 2
     isStart: 0
   - cellType: 2
     pieceType: 2
     rotationSteps: 3
     isStart: 0
-  - cellType: 0
-    pieceType: 0
+  - cellType: 2
+    pieceType: 2
     rotationSteps: 0
     isStart: 0
   - cellType: 0
@@ -115,7 +107,15 @@ MonoBehaviour:
     pieceType: 0
     rotationSteps: 0
     isStart: 0
-  levelNumber: 4
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  levelNumber: 5
   world: 1
-  parMoves: 24
+  parMoves: 16
   requiredLoops: 1

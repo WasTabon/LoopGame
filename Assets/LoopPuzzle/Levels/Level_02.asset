@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a476f91be1dd2c42ba8fa0a48725228, type: 3}
   m_Name: Level_02
   m_EditorClassIdentifier: 
-  width: 5
+  width: 4
   height: 5
   cells:
   - cellType: 0
@@ -35,6 +35,34 @@ MonoBehaviour:
     pieceType: 0
     rotationSteps: 0
     isStart: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 1
+    isStart: 1
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 1
+    isStart: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 1
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
   - cellType: 0
     pieceType: 0
     rotationSteps: 0
@@ -42,58 +70,10 @@ MonoBehaviour:
   - cellType: 2
     pieceType: 2
     rotationSteps: 2
-    isStart: 1
-  - cellType: 2
-    pieceType: 1
-    rotationSteps: 0
-    isStart: 0
-  - cellType: 2
-    pieceType: 2
-    rotationSteps: 1
-    isStart: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-  - cellType: 2
-    pieceType: 1
-    rotationSteps: 1
-    isStart: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-  - cellType: 2
-    pieceType: 1
-    rotationSteps: 1
-    isStart: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
     isStart: 0
   - cellType: 2
     pieceType: 2
     rotationSteps: 3
-    isStart: 0
-  - cellType: 2
-    pieceType: 1
-    rotationSteps: 3
-    isStart: 0
-  - cellType: 2
-    pieceType: 2
-    rotationSteps: 0
-    isStart: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
     isStart: 0
   - cellType: 0
     pieceType: 0
@@ -116,3 +96,6 @@ MonoBehaviour:
     rotationSteps: 0
     isStart: 0
   levelNumber: 2
+  world: 1
+  parMoves: 18
+  requiredLoops: 1

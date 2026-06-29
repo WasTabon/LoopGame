@@ -4,6 +4,7 @@ using UnityEngine;
 public class LoopResult
 {
     public bool isLoopClosed;
+    public int closedLoopCount;
     public List<Cell> loopCells = new List<Cell>();
     public List<Cell> openEndCells = new List<Cell>();
 }
@@ -12,64 +13,84 @@ public static class LoopValidator
 {
     public static LoopResult Validate(GridManager grid, Cell startCell)
     {
+        return Validate(grid, startCell, 1);
+    }
+
+    public static LoopResult Validate(GridManager grid, Cell startCell, int requiredLoops)
+    {
+        LoopResult result = ValidateAllLoops(grid);
+        result.isLoopClosed = result.closedLoopCount >= requiredLoops;
+
+        if (startCell != null && startCell.currentPiece != null && !result.isLoopClosed)
+        {
+        }
+        return result;
+    }
+
+    public static LoopResult ValidateAllLoops(GridManager grid)
+    {
         LoopResult result = new LoopResult();
+        HashSet<Cell> globalSeen = new HashSet<Cell>();
 
-        if (startCell == null || startCell.currentPiece == null)
+        List<Cell> allPieceCells = new List<Cell>();
+        grid.ForEachCell(cell =>
         {
-            return result;
-        }
+            if (cell.currentPiece != null) allPieceCells.Add(cell);
+        });
 
-        HashSet<Cell> component = new HashSet<Cell>();
-        Stack<Cell> stack = new Stack<Cell>();
-        stack.Push(startCell);
-
-        bool hasOpenEnd = false;
-
-        while (stack.Count > 0)
+        foreach (Cell seed in allPieceCells)
         {
-            Cell current = stack.Pop();
-            if (component.Contains(current)) continue;
-            component.Add(current);
+            if (globalSeen.Contains(seed)) continue;
 
-            bool[] conn = current.currentPiece.GetConnections();
-            for (int d = 0; d < 4; d++)
+            HashSet<Cell> component = new HashSet<Cell>();
+            Stack<Cell> stack = new Stack<Cell>();
+            stack.Push(seed);
+            bool componentHasOpenEnd = false;
+
+            while (stack.Count > 0)
             {
-                if (!conn[d]) continue;
+                Cell current = stack.Pop();
+                if (component.Contains(current)) continue;
+                component.Add(current);
+                globalSeen.Add(current);
 
-                if (!IsMutual(grid, current, (Direction)d))
+                bool[] conn = current.currentPiece.GetConnections();
+                for (int d = 0; d < 4; d++)
                 {
-                    hasOpenEnd = true;
-                    if (!result.openEndCells.Contains(current))
+                    if (!conn[d]) continue;
+                    if (!IsMutual(grid, current, (Direction)d))
                     {
-                        result.openEndCells.Add(current);
+                        componentHasOpenEnd = true;
+                        if (!result.openEndCells.Contains(current)) result.openEndCells.Add(current);
+                        continue;
                     }
-                    continue;
-                }
-
-                Cell neighbor = GetNeighbor(grid, current, (Direction)d);
-                if (neighbor != null && !component.Contains(neighbor))
-                {
-                    stack.Push(neighbor);
+                    Cell neighbor = GetNeighbor(grid, current, (Direction)d);
+                    if (neighbor != null && !component.Contains(neighbor))
+                    {
+                        stack.Push(neighbor);
+                    }
                 }
             }
-        }
 
-        if (hasOpenEnd)
-        {
-            return result;
-        }
+            if (componentHasOpenEnd) continue;
 
-        foreach (Cell cell in component)
-        {
-            int degree = CountConnections(cell.currentPiece.GetConnections());
-            if (degree < 2)
+            bool allDegreeOk = true;
+            foreach (Cell cell in component)
             {
-                return result;
+                if (CountConnections(cell.currentPiece.GetConnections()) < 2)
+                {
+                    allDegreeOk = false;
+                    break;
+                }
+            }
+
+            if (allDegreeOk && component.Count >= 4)
+            {
+                result.closedLoopCount++;
+                result.loopCells.AddRange(component);
             }
         }
 
-        result.isLoopClosed = true;
-        result.loopCells.AddRange(component);
         return result;
     }
 

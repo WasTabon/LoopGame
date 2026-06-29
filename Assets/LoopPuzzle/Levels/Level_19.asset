@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a476f91be1dd2c42ba8fa0a48725228, type: 3}
+  m_Name: Level_19
+  m_EditorClassIdentifier: 
+  width: 7
+  height: 7
+  cells:
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 2
+    isStart: 1
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 1
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 3
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 2
+    isStart: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 2
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 3
+    isStart: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 2
+    isStart: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 3
+    isStart: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 1
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 3
+    isStart: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 3
+    isStart: 0
+  - cellType: 2
+    pieceType: 2
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 3
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  - cellType: 0
+    pieceType: 0
+    rotationSteps: 0
+    isStart: 0
+  levelNumber: 19
+  world: 4
+  parMoves: 24
+  requiredLoops: 2

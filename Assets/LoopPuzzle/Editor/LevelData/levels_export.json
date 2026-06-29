@@ -1,0 +1,5635 @@
+[
+ {
+  "name": "Level_01",
+  "world": 1,
+  "levelNumber": 1,
+  "width": 4,
+  "height": 4,
+  "requiredLoops": 1,
+  "parMoves": 8,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_02",
+  "world": 1,
+  "levelNumber": 2,
+  "width": 4,
+  "height": 5,
+  "requiredLoops": 1,
+  "parMoves": 18,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_03",
+  "world": 1,
+  "levelNumber": 3,
+  "width": 5,
+  "height": 4,
+  "requiredLoops": 1,
+  "parMoves": 6,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_04",
+  "world": 1,
+  "levelNumber": 4,
+  "width": 5,
+  "height": 5,
+  "requiredLoops": 1,
+  "parMoves": 24,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_05",
+  "world": 1,
+  "levelNumber": 5,
+  "width": 5,
+  "height": 5,
+  "requiredLoops": 1,
+  "parMoves": 16,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_06",
+  "world": 2,
+  "levelNumber": 6,
+  "width": 5,
+  "height": 5,
+  "requiredLoops": 1,
+  "parMoves": 12,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_07",
+  "world": 2,
+  "levelNumber": 7,
+  "width": 5,
+  "height": 5,
+  "requiredLoops": 1,
+  "parMoves": 13,
+  "cells": [
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_08",
+  "world": 2,
+  "levelNumber": 8,
+  "width": 6,
+  "height": 6,
+  "requiredLoops": 1,
+  "parMoves": 12,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_09",
+  "world": 2,
+  "levelNumber": 9,
+  "width": 6,
+  "height": 6,
+  "requiredLoops": 1,
+  "parMoves": 29,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": true
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_10",
+  "world": 2,
+  "levelNumber": 10,
+  "width": 6,
+  "height": 6,
+  "requiredLoops": 1,
+  "parMoves": 24,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": true
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_11",
+  "world": 3,
+  "levelNumber": 11,
+  "width": 6,
+  "height": 5,
+  "requiredLoops": 1,
+  "parMoves": 20,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 0,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_12",
+  "world": 3,
+  "levelNumber": 12,
+  "width": 6,
+  "height": 6,
+  "requiredLoops": 1,
+  "parMoves": 27,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_13",
+  "world": 3,
+  "levelNumber": 13,
+  "width": 6,
+  "height": 6,
+  "requiredLoops": 1,
+  "parMoves": 10,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_14",
+  "world": 3,
+  "levelNumber": 14,
+  "width": 6,
+  "height": 6,
+  "requiredLoops": 1,
+  "parMoves": 11,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 0,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_15",
+  "world": 3,
+  "levelNumber": 15,
+  "width": 6,
+  "height": 7,
+  "requiredLoops": 1,
+  "parMoves": 30,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 0,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_16",
+  "world": 4,
+  "levelNumber": 16,
+  "width": 6,
+  "height": 6,
+  "requiredLoops": 2,
+  "parMoves": 16,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_17",
+  "world": 4,
+  "levelNumber": 17,
+  "width": 6,
+  "height": 6,
+  "requiredLoops": 2,
+  "parMoves": 30,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_18",
+  "world": 4,
+  "levelNumber": 18,
+  "width": 6,
+  "height": 6,
+  "requiredLoops": 2,
+  "parMoves": 10,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_19",
+  "world": 4,
+  "levelNumber": 19,
+  "width": 7,
+  "height": 7,
+  "requiredLoops": 2,
+  "parMoves": 24,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_20",
+  "world": 4,
+  "levelNumber": 20,
+  "width": 7,
+  "height": 7,
+  "requiredLoops": 2,
+  "parMoves": 33,
+  "cells": [
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 0,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_21",
+  "world": 5,
+  "levelNumber": 21,
+  "width": 7,
+  "height": 7,
+  "requiredLoops": 1,
+  "parMoves": 32,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_22",
+  "world": 5,
+  "levelNumber": 22,
+  "width": 7,
+  "height": 7,
+  "requiredLoops": 1,
+  "parMoves": 40,
+  "cells": [
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_23",
+  "world": 5,
+  "levelNumber": 23,
+  "width": 5,
+  "height": 5,
+  "requiredLoops": 1,
+  "parMoves": 27,
+  "cells": [
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 3,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 3,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_24",
+  "world": 5,
+  "levelNumber": 24,
+  "width": 7,
+  "height": 8,
+  "requiredLoops": 1,
+  "parMoves": 34,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ },
+ {
+  "name": "Level_25",
+  "world": 5,
+  "levelNumber": 25,
+  "width": 8,
+  "height": 8,
+  "requiredLoops": 1,
+  "parMoves": 52,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 0,
+    "start": true
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 1,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 1,
+    "pt": 2,
+    "rot": 2,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 3,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false
+   }
+  ]
+ }
+]

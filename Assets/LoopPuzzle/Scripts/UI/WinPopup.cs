@@ -6,11 +6,14 @@ public class WinPopup : MonoBehaviour
 {
     public PopupBase popup;
     public TextMeshProUGUI movesText;
+    public StarDisplay starDisplay;
     public Button restartButton;
     public Button nextButton;
+    public Button homeButton;
 
     private System.Action onRestart;
     private System.Action onNext;
+    private System.Action onHome;
 
     private void OnEnable()
     {
@@ -18,20 +21,33 @@ public class WinPopup : MonoBehaviour
         restartButton.onClick.AddListener(HandleRestart);
         nextButton.onClick.RemoveListener(HandleNext);
         nextButton.onClick.AddListener(HandleNext);
+        if (homeButton != null)
+        {
+            homeButton.onClick.RemoveListener(HandleHome);
+            homeButton.onClick.AddListener(HandleHome);
+        }
     }
 
     private void OnDisable()
     {
         restartButton.onClick.RemoveListener(HandleRestart);
         nextButton.onClick.RemoveListener(HandleNext);
+        if (homeButton != null) homeButton.onClick.RemoveListener(HandleHome);
     }
 
-    public void ShowWin(int moves, System.Action restartCallback, System.Action nextCallback)
+    public void ShowWin(int moves, int stars, bool hasNext,
+        System.Action restartCallback, System.Action nextCallback, System.Action homeCallback)
     {
         onRestart = restartCallback;
         onNext = nextCallback;
+        onHome = homeCallback;
+
         movesText.text = "Moves: " + moves;
+        nextButton.gameObject.SetActive(hasNext);
+
         popup.Show();
+
+        if (starDisplay != null) starDisplay.RevealStars(stars);
     }
 
     private void HandleRestart()
@@ -44,5 +60,11 @@ public class WinPopup : MonoBehaviour
     {
         if (SoundManager.Instance != null) SoundManager.Instance.PlayClick();
         popup.Hide(() => onNext?.Invoke());
+    }
+
+    private void HandleHome()
+    {
+        if (SoundManager.Instance != null) SoundManager.Instance.PlayClick();
+        popup.Hide(() => onHome?.Invoke());
     }
 }

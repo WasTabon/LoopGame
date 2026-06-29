@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 486138011}
   - component: {fileID: 486138010}
   - component: {fileID: 486138012}
+  - component: {fileID: 486138013}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -788,6 +789,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224a5cdb4c6a19348911042e23ade631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!81 &486138013
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486138009}
+  m_Enabled: 1
 --- !u!1 &557072016
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,6 +1943,8 @@ MonoBehaviour:
   hud: {fileID: 557072020}
   winPopup: {fileID: 1898937566}
   flowAnimator: {fileID: 1688984650}
+  database: {fileID: 11400000, guid: fec74fc2466993342a471151e0f581c8, type: 2}
+  menuSceneName: MainMenu
 --- !u!4 &1748256278
 Transform:
   m_ObjectHideFlags: 0
@@ -2131,8 +2142,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popup: {fileID: 1898937568}
   movesText: {fileID: 332310454}
+  starDisplay: {fileID: 0}
   restartButton: {fileID: 319736834}
   nextButton: {fileID: 409775085}
+  homeButton: {fileID: 0}
 --- !u!224 &1898937567
 RectTransform:
   m_ObjectHideFlags: 0
