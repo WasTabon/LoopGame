@@ -11,6 +11,7 @@ public static class PieceSpriteFactory
     private static Sprite obstacleSprite;
     private static Sprite startSprite;
     private static Sprite glowDotSprite;
+    private static Sprite rotationArrowSprite;
 
     private static readonly Color PathColor = new Color(0.290f, 0.565f, 0.886f, 1f);
     private static readonly Color StartColor = new Color(0.961f, 0.651f, 0.137f, 1f);
@@ -105,6 +106,71 @@ public static class PieceSpriteFactory
         glowDotSprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
             new Vector2(0.5f, 0.5f), PixelsPerUnit);
         return glowDotSprite;
+    }
+
+    public static Sprite GetRotationArrowSprite()
+    {
+        if (rotationArrowSprite != null) return rotationArrowSprite;
+
+        Texture2D tex = new Texture2D(TexSize, TexSize, TextureFormat.RGBA32, false);
+        tex.filterMode = FilterMode.Bilinear;
+        tex.wrapMode = TextureWrapMode.Clamp;
+
+        Color[] pixels = new Color[TexSize * TexSize];
+        for (int i = 0; i < pixels.Length; i++) pixels[i] = new Color(0, 0, 0, 0);
+
+        float center = TexSize * 0.5f;
+        float ringRadius = TexSize * 0.32f;
+        float thickness = TexSize * 0.08f;
+        Color arrowColor = new Color(0.961f, 0.651f, 0.137f, 1f);
+
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float dx = x - center;
+                float dy = y - center;
+                float dist = Mathf.Sqrt(dx * dx + dy * dy);
+                float angle = Mathf.Atan2(dy, dx) * Mathf.Rad2Deg;
+                if (angle < 0) angle += 360f;
+
+                bool onRing = Mathf.Abs(dist - ringRadius) < thickness;
+                bool inArc = angle > 40f && angle < 320f;
+                if (onRing && inArc)
+                {
+                    pixels[y * TexSize + x] = arrowColor;
+                }
+            }
+        }
+
+        DrawArrowHead(pixels, center, ringRadius, arrowColor);
+
+        tex.SetPixels(pixels);
+        tex.Apply();
+        rotationArrowSprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
+            new Vector2(0.5f, 0.5f), PixelsPerUnit);
+        return rotationArrowSprite;
+    }
+
+    private static void DrawArrowHead(Color[] pixels, float center, float ringRadius, Color color)
+    {
+        float headAngle = 40f * Mathf.Deg2Rad;
+        float hx = center + Mathf.Cos(headAngle) * ringRadius;
+        float hy = center + Mathf.Sin(headAngle) * ringRadius;
+        float headSize = TexSize * 0.14f;
+
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float dx = x - hx;
+                float dy = y - hy;
+                if (Mathf.Sqrt(dx * dx + dy * dy) < headSize)
+                {
+                    pixels[y * TexSize + x] = color;
+                }
+            }
+        }
     }
 
     private static Sprite CreateRoundedSquare(Color color, float cornerFraction)

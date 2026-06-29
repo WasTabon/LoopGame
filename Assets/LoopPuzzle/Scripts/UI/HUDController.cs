@@ -1,14 +1,26 @@
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour
 {
     public TextMeshProUGUI levelText;
     public TextMeshProUGUI movesText;
+    public Button undoButton;
+    public Button restartButton;
+    public Button hintButton;
+    public LevelController levelController;
 
     private int displayedMoves;
     private Tween counterTween;
+
+    private void Start()
+    {
+        if (undoButton != null) undoButton.onClick.AddListener(OnUndo);
+        if (restartButton != null) restartButton.onClick.AddListener(OnRestart);
+        if (hintButton != null) hintButton.onClick.AddListener(OnHint);
+    }
 
     public void SetLevel(int levelNumber)
     {
@@ -35,5 +47,25 @@ public class HUDController : MonoBehaviour
         movesText.transform.localScale = Vector3.one;
         movesText.transform.DOPunchScale(Vector3.one * 0.15f, 0.25f, 6, 0.6f);
         displayedMoves = newMoves;
+    }
+
+    public void SetUndoEnabled(bool enabled)
+    {
+        if (undoButton != null) undoButton.interactable = enabled;
+    }
+
+    private void OnUndo()
+    {
+        if (levelController != null) levelController.Undo();
+    }
+
+    private void OnRestart()
+    {
+        if (levelController != null) levelController.RestartLevel();
+    }
+
+    private void OnHint()
+    {
+        if (levelController != null) levelController.RequestHint();
     }
 }

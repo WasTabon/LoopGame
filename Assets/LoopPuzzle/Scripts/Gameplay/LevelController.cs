@@ -10,12 +10,16 @@ public class LevelController : MonoBehaviour
     public WinPopup winPopup;
     public LoopFlowAnimator flowAnimator;
     public LevelDatabase database;
+    public HintSystem hintSystem;
     public string menuSceneName = "MainMenu";
 
     private LevelData currentLevel;
     private int moves;
     private bool levelComplete;
     private bool hintUsed;
+    private readonly MoveHistory history = new MoveHistory();
+
+    public LevelData CurrentLevel => currentLevel;
 
     private void Awake()
     {
@@ -54,9 +58,11 @@ public class LevelController : MonoBehaviour
         moves = 0;
         levelComplete = false;
         hintUsed = false;
+        history.Clear();
 
         hud.SetLevel(currentLevel.levelNumber);
         hud.SetMovesInstant(0);
+        hud.SetUndoEnabled(false);
 
         pieceInput.SetInputLocked(false);
     }
@@ -66,6 +72,71 @@ public class LevelController : MonoBehaviour
         if (levelComplete) return;
         moves++;
         hud.AnimateMoves(moves);
+    }
+
+    public void RecordRotation(int x, int y)
+    {
+        if (levelComplete) return;
+        history.RecordRotation(x, y);
+        hud.SetUndoEnabled(history.HasMoves);
+    }
+
+    public void RecordDrag(int fromX, int fromY, int toX, int toY)
+    {
+        if (levelComplete) return;
+        history.RecordDrag(fromX, fromY, toX, toY);
+        hud.SetUndoEnabled(history.HasMoves);
+    }
+
+    public void Undo()
+    {
+        if (levelComplete) return;
+        MoveRecord record = history.Pop();
+        if (record == null) return;
+
+        if (SoundManager.Instance != null) SoundManager.Instance.PlayBack();
+        if (HapticManager.Instance != null) HapticManager.Instance.LightTap();
+
+        if (record.type == MoveType.Rotation)
+        {
+            Cell cell = gridManager.GetCell(record.fromX, record.fromY);
+            if (cell != null && cell.currentPiece != null)
+            {
+                cell.currentPiece.RotateBack();
+            }
+        }
+        else
+        {
+            Cell toCell = gridManager.GetCell(record.toX, record.toY);
+            Cell fromCell = gridManager.GetCell(record.fromX, record.fromY);
+            if (toCell != null && fromCell != null && toCell.currentPiece != null)
+            {
+                gridManager.MovePiece(toCell, fromCell);
+                Vector3 dest = gridManager.GridToWorld(fromCell.gridX, fromCell.gridY);
+                fromCell.currentPiece.SnapTo(dest);
+            }
+        }
+
+        if (moves > 0)
+        {
+            moves--;
+            hud.AnimateMoves(moves);
+        }
+
+        hud.SetUndoEnabled(history.HasMoves);
+    }
+
+    public void RequestHint()
+    {
+        if (levelComplete) return;
+        if (hintSystem == null) return;
+
+        bool shown = hintSystem.ShowHint(currentLevel);
+        if (shown)
+        {
+            hintUsed = true;
+            if (SoundManager.Instance != null) SoundManager.Instance.PlayClick();
+        }
     }
 
     public void MarkHintUsed()
@@ -97,6 +168,7 @@ public class LevelController : MonoBehaviour
     {
         levelComplete = true;
         pieceInput.SetInputLocked(true);
+        hud.SetUndoEnabled(false);
 
         int stars = CalculateStars();
 

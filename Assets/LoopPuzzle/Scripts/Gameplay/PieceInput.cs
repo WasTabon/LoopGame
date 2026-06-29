@@ -129,6 +129,11 @@ public class PieceInput : MonoBehaviour
 
         if (target != null && IsValidTarget(target))
         {
+            int fromX = sourceCell.gridX;
+            int fromY = sourceCell.gridY;
+            int toX = target.gridX;
+            int toY = target.gridY;
+
             gridManager.MovePiece(sourceCell, target);
             Vector3 dest = gridManager.GridToWorld(target.gridX, target.gridY);
             draggedPiece.SnapTo(dest, OnMoveComplete);
@@ -136,7 +141,11 @@ public class PieceInput : MonoBehaviour
             if (SoundManager.Instance != null) SoundManager.Instance.PlayDrop();
             if (HapticManager.Instance != null) HapticManager.Instance.LightTap();
 
-            if (levelController != null) levelController.RegisterMove();
+            if (levelController != null)
+            {
+                levelController.RegisterMove();
+                levelController.RecordDrag(fromX, fromY, toX, toY);
+            }
         }
         else
         {
@@ -211,6 +220,11 @@ public class PieceInput : MonoBehaviour
             if (levelController != null)
             {
                 levelController.RegisterMove();
+                Cell cell = FindCellAt(worldPos);
+                if (cell != null)
+                {
+                    levelController.RecordRotation(cell.gridX, cell.gridY);
+                }
             }
         }
         else

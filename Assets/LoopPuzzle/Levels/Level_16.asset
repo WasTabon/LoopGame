@@ -163,3 +163,36 @@ MonoBehaviour:
   world: 4
   parMoves: 16
   requiredLoops: 2
+  solution:
+  - tx: 0
+    ty: 0
+    pieceType: 2
+    rotationSteps: 0
+  - tx: 1
+    ty: 0
+    pieceType: 2
+    rotationSteps: 3
+  - tx: 1
+    ty: 1
+    pieceType: 2
+    rotationSteps: 2
+  - tx: 0
+    ty: 1
+    pieceType: 2
+    rotationSteps: 1
+  - tx: 3
+    ty: 3
+    pieceType: 2
+    rotationSteps: 0
+  - tx: 4
+    ty: 3
+    pieceType: 2
+    rotationSteps: 3
+  - tx: 4
+    ty: 4
+    pieceType: 2
+    rotationSteps: 2
+  - tx: 3
+    ty: 4
+    pieceType: 2
+    rotationSteps: 1

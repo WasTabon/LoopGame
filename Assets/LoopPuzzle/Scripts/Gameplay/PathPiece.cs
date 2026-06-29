@@ -67,6 +67,24 @@ public class PathPiece : MonoBehaviour
         scaleTween = transform.DOPunchScale(baseScale * 0.12f, 0.22f, 6, 0.6f);
     }
 
+    public void RotateBack(System.Action onComplete = null)
+    {
+        rotationSteps = ((rotationSteps - 1) % 4 + 4) % 4;
+        float fromZ = -90f * (rotationSteps + 1);
+        float targetZ = -90f * rotationSteps;
+
+        transform.localRotation = Quaternion.Euler(0, 0, fromZ);
+
+        rotateTween?.Kill();
+        rotateTween = transform.DORotate(new Vector3(0, 0, targetZ), 0.22f, RotateMode.Fast)
+            .SetEase(Ease.OutBack)
+            .OnComplete(() => onComplete?.Invoke());
+
+        scaleTween?.Kill();
+        transform.localScale = baseScale;
+        scaleTween = transform.DOPunchScale(baseScale * 0.12f, 0.22f, 6, 0.6f);
+    }
+
     public void PlayInvalidFeedback()
     {
         transform.DOShakeRotation(0.3f, new Vector3(0, 0, 12f), 12, 60f);

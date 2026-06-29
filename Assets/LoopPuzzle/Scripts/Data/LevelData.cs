@@ -9,6 +9,15 @@ public class CellDefinition
     public bool isStart = false;
 }
 
+[System.Serializable]
+public class SolutionEntry
+{
+    public int tx;
+    public int ty;
+    public PieceType pieceType = PieceType.None;
+    public int rotationSteps = 0;
+}
+
 [CreateAssetMenu(fileName = "Level", menuName = "Loop Puzzle/Level Data")]
 public class LevelData : ScriptableObject
 {
@@ -21,6 +30,8 @@ public class LevelData : ScriptableObject
     public int world = 1;
     public int parMoves = 10;
     public int requiredLoops = 1;
+
+    public SolutionEntry[] solution;
 
     public CellDefinition GetCell(int x, int y)
     {

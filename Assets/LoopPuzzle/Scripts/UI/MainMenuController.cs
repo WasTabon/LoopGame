@@ -8,6 +8,7 @@ public class MainMenuController : MonoBehaviour
     public RectTransform playButton;
     public RectTransform levelsButton;
     public RectTransform settingsButton;
+    public SettingsPopup settingsPopup;
 
     public string gameSceneName = "Game";
     public string levelSelectSceneName = "LevelSelect";
@@ -56,6 +57,9 @@ public class MainMenuController : MonoBehaviour
 
     private void OnSettingsClicked()
     {
-        Debug.Log("Settings pressed - popup will be added in a later iteration.");
+        if (settingsPopup != null)
+        {
+            settingsPopup.Open();
+        }
     }
 }

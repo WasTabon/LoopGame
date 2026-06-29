@@ -243,3 +243,76 @@ MonoBehaviour:
   world: 5
   parMoves: 34
   requiredLoops: 1
+  solution:
+  - tx: 1
+    ty: 1
+    pieceType: 2
+    rotationSteps: 0
+  - tx: 2
+    ty: 1
+    pieceType: 1
+    rotationSteps: 1
+  - tx: 3
+    ty: 1
+    pieceType: 1
+    rotationSteps: 1
+  - tx: 4
+    ty: 1
+    pieceType: 1
+    rotationSteps: 1
+  - tx: 5
+    ty: 1
+    pieceType: 2
+    rotationSteps: 3
+  - tx: 5
+    ty: 2
+    pieceType: 1
+    rotationSteps: 0
+  - tx: 5
+    ty: 3
+    pieceType: 1
+    rotationSteps: 0
+  - tx: 5
+    ty: 4
+    pieceType: 1
+    rotationSteps: 0
+  - tx: 5
+    ty: 5
+    pieceType: 1
+    rotationSteps: 0
+  - tx: 5
+    ty: 6
+    pieceType: 2
+    rotationSteps: 2
+  - tx: 4
+    ty: 6
+    pieceType: 1
+    rotationSteps: 1
+  - tx: 3
+    ty: 6
+    pieceType: 1
+    rotationSteps: 1
+  - tx: 2
+    ty: 6
+    pieceType: 1
+    rotationSteps: 1
+  - tx: 1
+    ty: 6
+    pieceType: 2
+    rotationSteps: 1
+  - tx: 1
+    ty: 5
+    pieceType: 1
+    rotationSteps: 0
+  - tx: 1
+    ty: 4
+    pieceType: 1
+    rotationSteps: 0
+  - tx: 1
+    ty: 3
+    pieceType: 1
+    rotationSteps: 0
+  - tx: 1
+    ty: 2
+    pieceType: 1
+    rotationSteps: 0
