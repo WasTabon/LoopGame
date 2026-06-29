@@ -9,6 +9,10 @@ public class Cell : MonoBehaviour
 
     private SpriteRenderer background;
     private SpriteRenderer startMarker;
+    private Color baseColor = Color.white;
+
+    private static readonly Color ValidTargetColor = new Color(0.290f, 0.565f, 0.886f, 0.30f);
+    private static readonly Color HoverTargetColor = new Color(0.961f, 0.651f, 0.137f, 0.50f);
 
     public bool IsObstacle => cellType == CellType.Obstacle;
     public bool IsEmpty => currentPiece == null && cellType != CellType.Obstacle;
@@ -25,6 +29,7 @@ public class Cell : MonoBehaviour
         background.sortingOrder = 0;
 
         ApplyBackgroundStyle();
+        baseColor = background.color;
         SetScale(worldSize);
 
         if (isStart)
@@ -77,5 +82,20 @@ public class Cell : MonoBehaviour
     public void SetPiece(PathPiece piece)
     {
         currentPiece = piece;
+    }
+
+    public void ShowAsValidTarget()
+    {
+        background.color = ValidTargetColor;
+    }
+
+    public void ShowAsHoverTarget()
+    {
+        background.color = HoverTargetColor;
+    }
+
+    public void ClearHighlight()
+    {
+        background.color = baseColor;
     }
 }

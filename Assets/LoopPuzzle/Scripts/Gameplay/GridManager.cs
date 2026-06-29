@@ -141,6 +141,35 @@ public class GridManager : MonoBehaviour
         return cells[x, y];
     }
 
+    public Cell GetCellAtWorld(Vector3 worldPos)
+    {
+        Vector3 local = worldPos - originPosition;
+        int x = Mathf.RoundToInt(local.x / cellWorldSize);
+        int y = Mathf.RoundToInt(local.y / cellWorldSize);
+        return GetCell(x, y);
+    }
+
+    public void MovePiece(Cell from, Cell to)
+    {
+        if (from == null || to == null) return;
+        PathPiece piece = from.currentPiece;
+        if (piece == null) return;
+
+        from.SetPiece(null);
+        to.SetPiece(piece);
+    }
+
+    public void ForEachCell(System.Action<Cell> action)
+    {
+        for (int y = 0; y < height; y++)
+        {
+            for (int x = 0; x < width; x++)
+            {
+                if (cells[x, y] != null) action(cells[x, y]);
+            }
+        }
+    }
+
     private void ClearExisting()
     {
         if (cellContainer != null) Destroy(cellContainer.gameObject);

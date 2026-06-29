@@ -94,6 +94,40 @@ public class PathPiece : MonoBehaviour
         transform.localScale = baseScale;
     }
 
+    public void Lift()
+    {
+        scaleTween?.Kill();
+        spriteRenderer.sortingOrder = 15;
+        transform.DOScale(baseScale * 1.15f, 0.12f).SetEase(Ease.OutQuad);
+    }
+
+    public void FollowTo(Vector3 worldPos)
+    {
+        transform.position = worldPos;
+    }
+
+    public void SnapTo(Vector3 worldPos, System.Action onComplete = null)
+    {
+        scaleTween?.Kill();
+        transform.DOScale(baseScale, 0.18f).SetEase(Ease.OutBack);
+        transform.DOMove(worldPos, 0.18f).SetEase(Ease.OutBack).OnComplete(() =>
+        {
+            spriteRenderer.sortingOrder = 5;
+            onComplete?.Invoke();
+        });
+    }
+
+    public void ReturnTo(Vector3 worldPos, System.Action onComplete = null)
+    {
+        scaleTween?.Kill();
+        transform.DOScale(baseScale, 0.22f).SetEase(Ease.OutBack);
+        transform.DOMove(worldPos, 0.22f).SetEase(Ease.OutBack).OnComplete(() =>
+        {
+            spriteRenderer.sortingOrder = 5;
+            onComplete?.Invoke();
+        });
+    }
+
     private void OnDestroy()
     {
         rotateTween?.Kill();

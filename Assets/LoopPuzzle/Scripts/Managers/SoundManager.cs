@@ -19,6 +19,8 @@ public class SoundManager : MonoBehaviour
     private AudioClip transitionClip;
     private AudioClip winClip;
     private AudioClip flowClip;
+    private AudioClip pickupClip;
+    private AudioClip dropClip;
 
     private bool sfxMuted;
     private bool musicMuted;
@@ -69,6 +71,8 @@ public class SoundManager : MonoBehaviour
         transitionClip = CreateBeep(620f, 0.12f, 0.4f);
         winClip = CreateArpeggio(new float[] { 523f, 659f, 784f, 1047f }, 0.10f, 0.45f);
         flowClip = CreateSweep(300f, 900f, 0.5f, 0.3f);
+        pickupClip = CreateBeep(700f, 0.06f, 0.4f);
+        dropClip = CreateBeep(520f, 0.07f, 0.45f);
     }
 
     private AudioClip CreateSweep(float startFreq, float endFreq, float duration, float volume)
@@ -156,6 +160,16 @@ public class SoundManager : MonoBehaviour
     public void PlayFlow()
     {
         PlaySfx(flowClip);
+    }
+
+    public void PlayPickup()
+    {
+        PlaySfx(pickupClip);
+    }
+
+    public void PlayDrop()
+    {
+        PlaySfx(dropClip);
     }
 
     private void PlaySfx(AudioClip clip)
