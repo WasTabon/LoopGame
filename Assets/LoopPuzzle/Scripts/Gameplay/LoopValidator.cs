@@ -109,11 +109,16 @@ public static class LoopValidator
     public static bool ValidateColorLoops(GridManager grid)
     {
         HashSet<PieceColor> colorsPresent = new HashSet<PieceColor>();
+        int totalPieces = 0;
         grid.ForEachCell(cell =>
         {
-            if (cell.currentPiece != null && cell.currentPiece.pieceColor != PieceColor.Neutral)
+            if (cell.currentPiece != null)
             {
-                colorsPresent.Add(cell.currentPiece.pieceColor);
+                totalPieces++;
+                if (cell.currentPiece.pieceColor != PieceColor.Neutral)
+                {
+                    colorsPresent.Add(cell.currentPiece.pieceColor);
+                }
             }
         });
 
@@ -124,6 +129,8 @@ public static class LoopValidator
 
         LoopResult all = ValidateAllLoops(grid);
         if (all.closedLoopCount == 0) return false;
+        if (all.openEndCells.Count > 0) return false;
+        if (all.loopCells.Count != totalPieces) return false;
 
         HashSet<PieceColor> colorsWithLoop = new HashSet<PieceColor>();
         foreach (Cell c in all.loopCells)
