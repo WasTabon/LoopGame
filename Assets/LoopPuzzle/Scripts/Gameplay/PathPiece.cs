@@ -17,6 +17,8 @@ public class PathPiece : MonoBehaviour
     private Vector3 baseScale;
     private Color baseColor = Color.white;
     private int rotationsUsed = 0;
+    private TextMesh limitRenderer;
+    private GameObject limitLabel;
 
     private static readonly Color HighlightColor = new Color(1f, 0.95f, 0.7f, 1f);
 
@@ -64,6 +66,65 @@ public class PathPiece : MonoBehaviour
         return rotationsUsed < maxRotations;
     }
 
+    public int RemainingRotations()
+    {
+        if (maxRotations <= 0) return -1;
+        return Mathf.Max(0, maxRotations - rotationsUsed);
+    }
+
+    public void SetupRotationLimitIndicator()
+    {
+        if (maxRotations <= 0) return;
+        if (limitLabel != null) return;
+
+        GameObject labelGo = new GameObject("RotationLimit");
+        labelGo.transform.SetParent(transform, false);
+        labelGo.transform.localPosition = new Vector3(0, 0, -0.2f);
+        limitLabel = labelGo;
+
+        limitRenderer = labelGo.AddComponent<TextMesh>();
+        Font font = GetBuiltinFont();
+        if (font != null)
+        {
+            limitRenderer.font = font;
+            MeshRenderer fr = labelGo.GetComponent<MeshRenderer>();
+            if (fr != null) fr.sharedMaterial = font.material;
+        }
+        limitRenderer.text = maxRotations.ToString();
+        limitRenderer.characterSize = 0.12f;
+        limitRenderer.fontSize = 64;
+        limitRenderer.anchor = TextAnchor.MiddleCenter;
+        limitRenderer.alignment = TextAlignment.Center;
+        limitRenderer.color = new Color(1f, 1f, 1f, 0.95f);
+
+        MeshRenderer mr = labelGo.GetComponent<MeshRenderer>();
+        if (mr != null) mr.sortingOrder = 12;
+
+        float inv = baseScale.x != 0f ? 1f / baseScale.x : 1f;
+        labelGo.transform.localScale = new Vector3(inv, inv, 1f) * 0.5f;
+
+        UpdateLimitLabel();
+    }
+
+    private static Font cachedFont;
+    private static Font GetBuiltinFont()
+    {
+        if (cachedFont != null) return cachedFont;
+        cachedFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        if (cachedFont == null) cachedFont = Resources.GetBuiltinResource<Font>("Arial.ttf");
+        return cachedFont;
+    }
+
+    private void UpdateLimitLabel()
+    {
+        if (limitRenderer == null) return;
+        int remaining = RemainingRotations();
+        limitRenderer.text = remaining.ToString();
+        limitRenderer.color = remaining == 0
+            ? new Color(0.95f, 0.45f, 0.45f, 1f)
+            : new Color(1f, 1f, 1f, 0.95f);
+    }
+
     public void SetScale(float worldSize)
     {
         Sprite sprite = spriteRenderer.sprite;
@@ -97,7 +158,7 @@ public class PathPiece : MonoBehaviour
 
     public void Rotate(System.Action onComplete = null)
     {
-        if (!canRotate)
+        if (!canRotate || !CanStillRotate())
         {
             onComplete?.Invoke();
             return;
@@ -115,10 +176,13 @@ public class PathPiece : MonoBehaviour
         scaleTween?.Kill();
         transform.localScale = baseScale;
         scaleTween = transform.DOPunchScale(baseScale * 0.12f, 0.22f, 6, 0.6f);
+
+        UpdateLimitLabel();
     }
 
     public void RotateBack(System.Action onComplete = null)
     {
+        if (rotationsUsed > 0) rotationsUsed--;
         rotationSteps = ((rotationSteps - 1) % 4 + 4) % 4;
         float fromZ = -90f * (rotationSteps + 1);
         float targetZ = -90f * rotationSteps;
@@ -133,6 +197,8 @@ public class PathPiece : MonoBehaviour
         scaleTween?.Kill();
         transform.localScale = baseScale;
         scaleTween = transform.DOPunchScale(baseScale * 0.12f, 0.22f, 6, 0.6f);
+
+        UpdateLimitLabel();
     }
 
     public void PlayInvalidFeedback()
@@ -194,6 +260,14 @@ public class PathPiece : MonoBehaviour
             spriteRenderer.sortingOrder = 5;
             onComplete?.Invoke();
         });
+    }
+
+    private void LateUpdate()
+    {
+        if (limitLabel != null)
+        {
+            limitLabel.transform.rotation = Quaternion.identity;
+        }
     }
 
     private void OnDestroy()

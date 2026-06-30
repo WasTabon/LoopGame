@@ -122,7 +122,8 @@ public class LevelController : MonoBehaviour
             Cell fromCell = gridManager.GetCell(record.fromX, record.fromY);
             if (toCell != null && fromCell != null && toCell.currentPiece != null)
             {
-                gridManager.MovePiece(toCell, fromCell);
+                fromCell.Unbreak();
+                gridManager.MovePieceNoBreak(toCell, fromCell);
                 Vector3 dest = gridManager.GridToWorld(fromCell.gridX, fromCell.gridY);
                 fromCell.currentPiece.SnapTo(dest);
             }

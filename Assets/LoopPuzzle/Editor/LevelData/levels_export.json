@@ -8565,5 +8565,402 @@
     "color": 0
    }
   ]
+ },
+ {
+  "name": "Level_29",
+  "world": 5,
+  "levelNumber": 29,
+  "width": 3,
+  "height": 3,
+  "requiredLoops": 1,
+  "parMoves": 6,
+  "colorLoopsMode": false,
+  "coverAllMode": false,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": true,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 1,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 2,
+    "directional": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 2,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 1,
+    "directional": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   }
+  ],
+  "solution": [
+   {
+    "tx": 0,
+    "ty": 0,
+    "pt": 2,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 0,
+    "pt": 2,
+    "trot": 3,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 1,
+    "pt": 2,
+    "trot": 2,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 1,
+    "pt": 2,
+    "trot": 1,
+    "color": 0
+   }
+  ]
+ },
+ {
+  "name": "Level_30",
+  "world": 5,
+  "levelNumber": 30,
+  "width": 3,
+  "height": 3,
+  "requiredLoops": 1,
+  "parMoves": 12,
+  "colorLoopsMode": false,
+  "coverAllMode": false,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": true,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 2,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 1,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 1,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 1,
+    "directional": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 2,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 1,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 2,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 2,
+    "directional": false
+   }
+  ],
+  "solution": [
+   {
+    "tx": 0,
+    "ty": 0,
+    "pt": 2,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 1,
+    "pt": 1,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 2,
+    "pt": 2,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 0,
+    "pt": 1,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 2,
+    "pt": 1,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 0,
+    "pt": 2,
+    "trot": 3,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 1,
+    "pt": 1,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 2,
+    "pt": 2,
+    "trot": 2,
+    "color": 0
+   }
+  ]
+ },
+ {
+  "name": "Level_31",
+  "world": 5,
+  "levelNumber": 31,
+  "width": 3,
+  "height": 2,
+  "requiredLoops": 1,
+  "parMoves": 5,
+  "colorLoopsMode": false,
+  "coverAllMode": false,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": true,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   },
+   {
+    "ct": 6,
+    "pt": 2,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false
+   }
+  ],
+  "solution": [
+   {
+    "tx": 0,
+    "ty": 0,
+    "pt": 2,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 0,
+    "pt": 2,
+    "trot": 3,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 1,
+    "pt": 2,
+    "trot": 2,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 1,
+    "pt": 2,
+    "trot": 1,
+    "color": 0
+   }
+  ]
  }
 ]

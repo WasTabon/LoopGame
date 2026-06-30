@@ -211,7 +211,7 @@ public class PieceInput : MonoBehaviour
         PathPiece piece = FindPieceAt(worldPos);
         if (piece == null) return;
 
-        if (piece.canRotate)
+        if (piece.canRotate && piece.CanStillRotate())
         {
             piece.Rotate(OnRotationComplete);
             if (SoundManager.Instance != null) SoundManager.Instance.PlayClick();

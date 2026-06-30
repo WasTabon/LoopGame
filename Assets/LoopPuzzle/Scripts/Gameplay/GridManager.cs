@@ -145,7 +145,7 @@ public class GridManager : MonoBehaviour
         pieceGo.transform.SetParent(pieceContainer, false);
         pieceGo.transform.position = pos;
 
-        bool rotatable = def.cellType == CellType.Movable;
+        bool rotatable = def.cellType == CellType.Movable || def.cellType == CellType.Breakable;
 
         PathPiece piece = pieceGo.AddComponent<PathPiece>();
         piece.Init(def.pieceType, def.rotationSteps, rotatable);
@@ -161,6 +161,11 @@ public class GridManager : MonoBehaviour
         else if (def.cellType == CellType.Fixed)
         {
             piece.ApplyFixedTint();
+        }
+
+        if (def.maxRotations > 0)
+        {
+            piece.SetupRotationLimitIndicator();
         }
 
         cell.SetPiece(piece);
@@ -186,6 +191,21 @@ public class GridManager : MonoBehaviour
     }
 
     public void MovePiece(Cell from, Cell to)
+    {
+        if (from == null || to == null) return;
+        PathPiece piece = from.currentPiece;
+        if (piece == null) return;
+
+        from.SetPiece(null);
+        to.SetPiece(piece);
+
+        if (from.IsBreakable)
+        {
+            from.Break();
+        }
+    }
+
+    public void MovePieceNoBreak(Cell from, Cell to)
     {
         if (from == null || to == null) return;
         PathPiece piece = from.currentPiece;
