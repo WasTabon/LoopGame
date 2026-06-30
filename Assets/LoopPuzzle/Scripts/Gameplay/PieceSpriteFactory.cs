@@ -14,6 +14,7 @@ public static class PieceSpriteFactory
     private static Sprite rotationArrowSprite;
     private static Sprite tapPointerSprite;
     private static Sprite flowArrowSprite;
+    private static Sprite portalSprite;
     private static Sprite starFilledSprite;
     private static Sprite starEmptySprite;
     private static Sprite lockSprite;
@@ -310,6 +311,63 @@ public static class PieceSpriteFactory
         flowArrowSprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
             new Vector2(0.5f, 0.5f), PixelsPerUnit);
         return flowArrowSprite;
+    }
+
+    public static Sprite GetPortalSprite()
+    {
+        if (portalSprite != null) return portalSprite;
+
+        Texture2D tex = new Texture2D(TexSize, TexSize, TextureFormat.RGBA32, false);
+        tex.filterMode = FilterMode.Bilinear;
+        tex.wrapMode = TextureWrapMode.Clamp;
+
+        Color[] pixels = new Color[TexSize * TexSize];
+        for (int i = 0; i < pixels.Length; i++) pixels[i] = new Color(0, 0, 0, 0);
+
+        float center = TexSize * 0.5f;
+        float outerR = TexSize * 0.40f;
+        float ringW = TexSize * 0.07f;
+        Color ringCol = new Color(1f, 1f, 1f, 0.95f);
+
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float dx = x - center;
+                float dy = y - center;
+                float dist = Mathf.Sqrt(dx * dx + dy * dy);
+
+                if (Mathf.Abs(dist - outerR) < ringW)
+                {
+                    pixels[y * TexSize + x] = ringCol;
+                }
+                else if (Mathf.Abs(dist - outerR * 0.55f) < ringW * 0.7f)
+                {
+                    pixels[y * TexSize + x] = new Color(1f, 1f, 1f, 0.55f);
+                }
+            }
+        }
+
+        float notchY = center + outerR;
+        float notchSize = TexSize * 0.12f;
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float dx = x - center;
+                float dy = y - notchY;
+                if (Mathf.Sqrt(dx * dx + dy * dy) < notchSize)
+                {
+                    pixels[y * TexSize + x] = ringCol;
+                }
+            }
+        }
+
+        tex.SetPixels(pixels);
+        tex.Apply();
+        portalSprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
+            new Vector2(0.5f, 0.5f), PixelsPerUnit);
+        return portalSprite;
     }
 
     public static Sprite GetTapPointerSprite()

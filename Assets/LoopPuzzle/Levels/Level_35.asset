@@ -21,6 +21,7 @@ MonoBehaviour:
     isStart: 1
     color: 1
     portalId: 0
+    portalDir: 0
     maxRotations: 0
     directional: 0
     arrowDir: 0
@@ -30,6 +31,7 @@ MonoBehaviour:
     isStart: 0
     color: 1
     portalId: 0
+    portalDir: 0
     maxRotations: 0
     directional: 0
     arrowDir: 0
@@ -39,6 +41,7 @@ MonoBehaviour:
     isStart: 0
     color: 0
     portalId: 0
+    portalDir: 0
     maxRotations: 0
     directional: 0
     arrowDir: 0
@@ -48,6 +51,7 @@ MonoBehaviour:
     isStart: 0
     color: 2
     portalId: 0
+    portalDir: 0
     maxRotations: 0
     directional: 0
     arrowDir: 0
@@ -57,6 +61,7 @@ MonoBehaviour:
     isStart: 0
     color: 2
     portalId: 0
+    portalDir: 0
     maxRotations: 0
     directional: 0
     arrowDir: 0
@@ -66,6 +71,7 @@ MonoBehaviour:
     isStart: 0
     color: 1
     portalId: 0
+    portalDir: 0
     maxRotations: 0
     directional: 0
     arrowDir: 0
@@ -75,6 +81,7 @@ MonoBehaviour:
     isStart: 0
     color: 1
     portalId: 0
+    portalDir: 0
     maxRotations: 0
     directional: 0
     arrowDir: 0
@@ -84,6 +91,7 @@ MonoBehaviour:
     isStart: 0
     color: 0
     portalId: 0
+    portalDir: 0
     maxRotations: 0
     directional: 0
     arrowDir: 0
@@ -93,6 +101,7 @@ MonoBehaviour:
     isStart: 0
     color: 2
     portalId: 0
+    portalDir: 0
     maxRotations: 0
     directional: 0
     arrowDir: 0
@@ -102,6 +111,7 @@ MonoBehaviour:
     isStart: 0
     color: 2
     portalId: 0
+    portalDir: 0
     maxRotations: 0
     directional: 0
     arrowDir: 0
@@ -112,6 +122,7 @@ MonoBehaviour:
   colorLoopsMode: 1
   coverAllMode: 0
   directionalMode: 0
+  portalsMode: 0
   solution:
   - tx: 0
     ty: 0

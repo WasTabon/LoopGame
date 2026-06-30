@@ -169,6 +169,10 @@ public class LevelController : MonoBehaviour
         {
             won = LoopValidator.ValidateDirectional(gridManager);
         }
+        else if (currentLevel != null && currentLevel.portalsMode)
+        {
+            won = LoopValidator.ValidatePortals(gridManager);
+        }
         else
         {
             int required = currentLevel != null ? currentLevel.requiredLoops : 1;

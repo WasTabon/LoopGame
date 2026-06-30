@@ -205,3 +205,60 @@ def is_directional_win(placement, arrows):
     a1=all(arrows[c]==exit_of[c] for c in arrows if arrows[c] is not None)
     a2=all(arrows[c]==OPP[exit_of[c]] for c in arrows if arrows[c] is not None)
     return a1 or a2
+
+
+def is_portal_win(pieces, portals):
+    """pieces: pos->(pt,rot). portals: pos->(portal_id, mouth_dir).
+    Win if all pieces in closed loops (degree>=2, mutual), all portal mouths connect,
+    and tracing through portal teleports yields at least one closed loop covering all.
+    Mirrors Unity ValidatePortals."""
+    pair={}; by_id={}
+    for pos,(pid,cdir) in portals.items(): by_id.setdefault(pid,[]).append(pos)
+    for pid,ps in by_id.items():
+        if len(ps)!=2: return False
+        pair[ps[0]]=ps[1]; pair[ps[1]]=ps[0]
+    # piece mutuality + degree
+    for pos,(pt,r) in pieces.items():
+        c=rot(pt,r); deg=0
+        for d in range(4):
+            if c[d]:
+                deg+=1; dx,dy=OFF[d]; nb=(pos[0]+dx,pos[1]+dy)
+                ok=((nb in pieces and rot(*pieces[nb])[OPP[d]]) or
+                    (nb in portals and portals[nb][1]==OPP[d]))
+                if not ok: return False
+        if deg<2: return False
+    # portal mouths must face a connecting piece/portal
+    for pos,(pid,cdir) in portals.items():
+        dx,dy=OFF[cdir]; nb=(pos[0]+dx,pos[1]+dy)
+        ok=((nb in pieces and rot(*pieces[nb])[OPP[cdir]]) or
+            (nb in portals and portals[nb][1]==OPP[cdir]))
+        if not ok: return False
+    # trace loops
+    visited=set(); loops=0; edges=[]
+    for pos,(pt,r) in pieces.items():
+        for d in range(4):
+            if rot(pt,r)[d]: edges.append((pos,d))
+    def stp(cell,out_dir):
+        dx,dy=OFF[out_dir]; nb=(cell[0]+dx,cell[1]+dy); enter=OPP[out_dir]
+        if nb in pieces:
+            pt,r=pieces[nb]; c=rot(pt,r); outs=[d for d in range(4) if c[d] and d!=enter]
+            if len(outs)!=1: return None
+            return (nb,outs[0])
+        if nb in portals:
+            pid,cdir=portals[nb]
+            if cdir!=enter: return None
+            pp=pair[nb]; return (pp,portals[pp][1])
+        return None
+    for se in edges:
+        if se in visited: continue
+        cur=se; g=0; cyc=[]
+        while g<10000:
+            g+=1
+            if cur in visited: break
+            visited.add(cur); cyc.append(cur)
+            nxt=stp(*cur)
+            if nxt is None: break
+            cur=nxt
+            if cur==se: break
+        if cyc and cur==se: loops+=1
+    return loops>0

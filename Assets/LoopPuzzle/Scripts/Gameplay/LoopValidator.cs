@@ -106,6 +106,140 @@ public static class LoopValidator
         return result;
     }
 
+    public static bool ValidatePortals(GridManager grid)
+    {
+        List<Cell> portals = new List<Cell>();
+        List<Cell> pieces = new List<Cell>();
+        grid.ForEachCell(cell =>
+        {
+            if (cell.IsPortal) portals.Add(cell);
+            else if (cell.currentPiece != null) pieces.Add(cell);
+        });
+
+        if (portals.Count == 0)
+        {
+            return ValidateAllLoops(grid).closedLoopCount >= 1;
+        }
+
+        foreach (Cell portal in portals)
+        {
+            Cell pair = grid.GetPortalPair(portal);
+            if (pair == null) return false;
+
+            Cell mouthNeighbor = GetNeighbor(grid, portal, (Direction)portal.portalDir);
+            if (mouthNeighbor == null || mouthNeighbor.currentPiece == null) return false;
+            bool[] mn = mouthNeighbor.currentPiece.GetConnections();
+            if (!mn[(int)PieceConnections.Opposite((Direction)portal.portalDir)]) return false;
+        }
+
+        foreach (Cell pieceCell in pieces)
+        {
+            bool[] conn = pieceCell.currentPiece.GetConnections();
+            int degree = 0;
+            for (int d = 0; d < 4; d++)
+            {
+                if (!conn[d]) continue;
+                degree++;
+                Cell nb = GetNeighbor(grid, pieceCell, (Direction)d);
+                if (nb == null) return false;
+                Direction opp = PieceConnections.Opposite((Direction)d);
+                bool ok;
+                if (nb.IsPortal)
+                {
+                    ok = nb.portalDir == (int)opp;
+                }
+                else if (nb.currentPiece != null)
+                {
+                    ok = nb.currentPiece.GetConnections()[(int)opp] &&
+                         ColorsCompatible(pieceCell.currentPiece.pieceColor, nb.currentPiece.pieceColor);
+                }
+                else ok = false;
+                if (!ok) return false;
+            }
+            if (degree < 2) return false;
+        }
+
+        return TracePortalLoops(grid, pieces, portals);
+    }
+
+    private static bool TracePortalLoops(GridManager grid, List<Cell> pieces, List<Cell> portals)
+    {
+        HashSet<long> visited = new HashSet<long>();
+        int loopCount = 0;
+
+        foreach (Cell pieceCell in pieces)
+        {
+            bool[] conn = pieceCell.currentPiece.GetConnections();
+            for (int d = 0; d < 4; d++)
+            {
+                if (!conn[d]) continue;
+                long edgeId = EdgeId(pieceCell, d);
+                if (visited.Contains(edgeId)) continue;
+
+                Cell curCell = pieceCell;
+                int curOut = d;
+                int guard = 0;
+                bool closed = false;
+                while (guard++ < 10000)
+                {
+                    long eid = EdgeId(curCell, curOut);
+                    if (visited.Contains(eid)) break;
+                    visited.Add(eid);
+
+                    StepResult next = PortalStep(grid, curCell, curOut);
+                    if (next == null) break;
+                    curCell = next.cell;
+                    curOut = next.outDir;
+                    if (curCell == pieceCell && curOut == d) { closed = true; break; }
+                }
+                if (closed) loopCount++;
+            }
+        }
+
+        return loopCount > 0;
+    }
+
+    private class StepResult
+    {
+        public Cell cell;
+        public int outDir;
+    }
+
+    private static StepResult PortalStep(GridManager grid, Cell cell, int outDir)
+    {
+        Cell nb = GetNeighbor(grid, cell, (Direction)outDir);
+        if (nb == null) return null;
+        int enter = (int)PieceConnections.Opposite((Direction)outDir);
+
+        if (nb.IsPortal)
+        {
+            if (nb.portalDir != enter) return null;
+            Cell pair = grid.GetPortalPair(nb);
+            if (pair == null) return null;
+            return new StepResult { cell = pair, outDir = pair.portalDir };
+        }
+
+        if (nb.currentPiece != null)
+        {
+            bool[] nc = nb.currentPiece.GetConnections();
+            int exit = -1;
+            int exitCount = 0;
+            for (int dd = 0; dd < 4; dd++)
+            {
+                if (nc[dd] && dd != enter) { exit = dd; exitCount++; }
+            }
+            if (exitCount != 1) return null;
+            return new StepResult { cell = nb, outDir = exit };
+        }
+
+        return null;
+    }
+
+    private static long EdgeId(Cell cell, int dir)
+    {
+        return ((long)cell.gridX << 20) ^ ((long)cell.gridY << 8) ^ (long)dir;
+    }
+
     public static bool ValidateColorLoops(GridManager grid)
     {
         HashSet<PieceColor> colorsPresent = new HashSet<PieceColor>();

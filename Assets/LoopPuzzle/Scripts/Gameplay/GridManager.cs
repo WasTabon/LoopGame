@@ -116,6 +116,21 @@ public class GridManager : MonoBehaviour
         pieceContainer = pieceGo.transform;
     }
 
+    public Cell GetPortalPair(Cell portal)
+    {
+        if (portal == null || !portal.IsPortal) return null;
+        Cell found = null;
+        ForEachCell(c =>
+        {
+            if (found != null) return;
+            if (c != portal && c.IsPortal && c.portalId == portal.portalId)
+            {
+                found = c;
+            }
+        });
+        return found;
+    }
+
     private void CreateCell(int x, int y, CellDefinition def)
     {
         Vector3 pos = GridToWorld(x, y);
@@ -127,6 +142,11 @@ public class GridManager : MonoBehaviour
         Cell cell = cellGo.AddComponent<Cell>();
         cell.Init(x, y, def.cellType, def.isStart, cellWorldSize);
         cells[x, y] = cell;
+
+        if (def.cellType == CellType.Portal)
+        {
+            cell.SetPortal(def.portalId, def.portalDir);
+        }
 
         if (def.isStart)
         {

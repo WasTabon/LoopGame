@@ -7,6 +7,8 @@ public class Cell : MonoBehaviour
     public int gridY;
     public CellType cellType;
     public PathPiece currentPiece;
+    public int portalId = 0;
+    public int portalDir = 0;
 
     private SpriteRenderer background;
     private SpriteRenderer startMarker;
@@ -19,6 +21,48 @@ public class Cell : MonoBehaviour
     public bool IsObstacle => cellType == CellType.Obstacle;
     public bool IsEmpty => currentPiece == null && cellType != CellType.Obstacle;
     public bool IsBreakable => cellType == CellType.Breakable;
+    public bool IsPortal => cellType == CellType.Portal;
+
+    public void SetPortal(int id, int dir)
+    {
+        portalId = id;
+        portalDir = dir;
+        CreatePortalMarker();
+    }
+
+    private void CreatePortalMarker()
+    {
+        GameObject markerGo = new GameObject("PortalMarker");
+        markerGo.transform.SetParent(transform, false);
+        SpriteRenderer sr = markerGo.AddComponent<SpriteRenderer>();
+        sr.sprite = PieceSpriteFactory.GetPortalSprite();
+        sr.sortingOrder = 1;
+
+        Color portalColor = PortalColor(portalId);
+        sr.color = portalColor;
+
+        Sprite sprite = sr.sprite;
+        float spriteWorldSize = sprite.bounds.size.x;
+        float worldSize = background != null ? background.bounds.size.x : 1f;
+        float factor = (worldSize * 0.7f) / spriteWorldSize;
+        markerGo.transform.localScale = new Vector3(factor, factor, 1f);
+        markerGo.transform.localRotation = Quaternion.Euler(0, 0, -90f * portalDir);
+
+        markerGo.transform.DORotate(new Vector3(0, 0, -90f * portalDir + 360f), 8f, RotateMode.FastBeyond360)
+            .SetEase(Ease.Linear)
+            .SetLoops(-1, LoopType.Restart);
+    }
+
+    private static Color PortalColor(int id)
+    {
+        switch (id % 4)
+        {
+            case 1: return new Color(0.65f, 0.45f, 0.95f, 0.95f);
+            case 2: return new Color(0.40f, 0.85f, 0.95f, 0.95f);
+            case 3: return new Color(0.95f, 0.55f, 0.85f, 0.95f);
+            default: return new Color(0.75f, 0.75f, 0.55f, 0.95f);
+        }
+    }
 
     public void Init(int x, int y, CellType type, bool isStart, float worldSize)
     {

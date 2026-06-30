@@ -10,6 +10,7 @@ public class CellDefinition
 
     public PieceColor color = PieceColor.Neutral;
     public int portalId = 0;
+    public int portalDir = 0;
     public int maxRotations = 0;
     public bool directional = false;
     public int arrowDir = 0;
@@ -41,6 +42,7 @@ public class LevelData : ScriptableObject
     public bool colorLoopsMode = false;
     public bool coverAllMode = false;
     public bool directionalMode = false;
+    public bool portalsMode = false;
 
     public SolutionEntry[] solution;
 

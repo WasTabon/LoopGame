@@ -34,10 +34,35 @@ public static class LoopPathBuilder
                 if (cameFrom != -1 && d == cameFrom) continue;
 
                 Cell neighbor = GetNeighbor(grid, current, (Direction)d);
-                if (neighbor == null || neighbor.currentPiece == null) continue;
+                if (neighbor == null) continue;
+                Direction opposite = PieceConnections.Opposite((Direction)d);
+
+                if (neighbor.IsPortal)
+                {
+                    if (neighbor.portalDir != (int)opposite) continue;
+                    Cell pair = grid.GetPortalPair(neighbor);
+                    if (pair == null) continue;
+
+                    long portalEdge = EdgeKey(current, neighbor);
+                    if (visitedEdges.Contains(portalEdge)) continue;
+                    visitedEdges.Add(portalEdge);
+
+                    Cell pairNeighbor = GetNeighbor(grid, pair, (Direction)pair.portalDir);
+                    if (pairNeighbor == null || pairNeighbor.currentPiece == null) continue;
+
+                    path.Add(neighbor);
+                    path.Add(pair);
+                    path.Add(pairNeighbor);
+
+                    current = pairNeighbor;
+                    cameFrom = (int)PieceConnections.Opposite((Direction)pair.portalDir);
+                    moved = true;
+                    continue;
+                }
+
+                if (neighbor.currentPiece == null) continue;
 
                 bool[] neighborConn = neighbor.currentPiece.GetConnections();
-                Direction opposite = PieceConnections.Opposite((Direction)d);
                 if (!neighborConn[(int)opposite]) continue;
 
                 long edgeKey = EdgeKey(current, neighbor);
@@ -51,7 +76,7 @@ public static class LoopPathBuilder
 
             if (!moved) break;
             if (current == startCell) break;
-            path.Add(current);
+            if (current.currentPiece != null) path.Add(current);
         }
 
         return path;
