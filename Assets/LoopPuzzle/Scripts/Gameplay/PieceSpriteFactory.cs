@@ -13,6 +13,7 @@ public static class PieceSpriteFactory
     private static Sprite glowDotSprite;
     private static Sprite rotationArrowSprite;
     private static Sprite tapPointerSprite;
+    private static Sprite flowArrowSprite;
     private static Sprite starFilledSprite;
     private static Sprite starEmptySprite;
     private static Sprite lockSprite;
@@ -258,6 +259,57 @@ public static class PieceSpriteFactory
                 }
             }
         }
+    }
+
+    public static Sprite GetFlowArrowSprite()
+    {
+        if (flowArrowSprite != null) return flowArrowSprite;
+
+        Texture2D tex = new Texture2D(TexSize, TexSize, TextureFormat.RGBA32, false);
+        tex.filterMode = FilterMode.Bilinear;
+        tex.wrapMode = TextureWrapMode.Clamp;
+
+        Color[] pixels = new Color[TexSize * TexSize];
+        for (int i = 0; i < pixels.Length; i++) pixels[i] = new Color(0, 0, 0, 0);
+
+        Color arrowColor = new Color(1f, 1f, 1f, 0.92f);
+        float cx = TexSize * 0.5f;
+        float tipY = TexSize * 0.74f;
+        float baseY = TexSize * 0.40f;
+        float halfWidth = TexSize * 0.20f;
+
+        for (int y = 0; y < TexSize; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                float t = (y - baseY) / (tipY - baseY);
+                if (t < 0f || t > 1f) continue;
+                float widthAtY = halfWidth * (1f - t);
+                if (Mathf.Abs(x - cx) <= widthAtY)
+                {
+                    pixels[y * TexSize + x] = arrowColor;
+                }
+            }
+        }
+
+        float stemHalf = TexSize * 0.055f;
+        float stemBottom = TexSize * 0.26f;
+        for (int y = (int)stemBottom; y < (int)baseY; y++)
+        {
+            for (int x = 0; x < TexSize; x++)
+            {
+                if (Mathf.Abs(x - cx) <= stemHalf)
+                {
+                    pixels[y * TexSize + x] = arrowColor;
+                }
+            }
+        }
+
+        tex.SetPixels(pixels);
+        tex.Apply();
+        flowArrowSprite = Sprite.Create(tex, new Rect(0, 0, TexSize, TexSize),
+            new Vector2(0.5f, 0.5f), PixelsPerUnit);
+        return flowArrowSprite;
     }
 
     public static Sprite GetTapPointerSprite()

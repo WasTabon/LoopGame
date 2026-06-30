@@ -165,6 +165,10 @@ public class LevelController : MonoBehaviour
         {
             won = LoopValidator.ValidateColorLoops(gridManager);
         }
+        else if (currentLevel != null && currentLevel.directionalMode)
+        {
+            won = LoopValidator.ValidateDirectional(gridManager);
+        }
         else
         {
             int required = currentLevel != null ? currentLevel.requiredLoops : 1;

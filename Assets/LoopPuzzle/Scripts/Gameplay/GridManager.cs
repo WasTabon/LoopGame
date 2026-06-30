@@ -153,6 +153,7 @@ public class GridManager : MonoBehaviour
 
         piece.maxRotations = def.maxRotations;
         piece.directional = def.directional;
+        piece.arrowBaseDir = def.arrowDir;
 
         if (def.color != PieceColor.Neutral)
         {
@@ -166,6 +167,11 @@ public class GridManager : MonoBehaviour
         if (def.maxRotations > 0)
         {
             piece.SetupRotationLimitIndicator();
+        }
+
+        if (def.directional)
+        {
+            piece.SetupArrowIndicator();
         }
 
         cell.SetPiece(piece);

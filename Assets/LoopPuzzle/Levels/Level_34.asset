@@ -10,65 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a476f91be1dd2c42ba8fa0a48725228, type: 3}
-  m_Name: Level_03
+  m_Name: Level_34
   m_EditorClassIdentifier: 
-  width: 5
+  width: 3
   height: 4
   cells:
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
   - cellType: 2
     pieceType: 2
     rotationSteps: 3
@@ -85,8 +31,8 @@ MonoBehaviour:
     color: 0
     portalId: 0
     maxRotations: 0
-    directional: 0
-    arrowDir: 0
+    directional: 1
+    arrowDir: 2
   - cellType: 2
     pieceType: 2
     rotationSteps: 2
@@ -96,6 +42,15 @@ MonoBehaviour:
     maxRotations: 0
     directional: 0
     arrowDir: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 3
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 1
+    arrowDir: 0
   - cellType: 0
     pieceType: 0
     rotationSteps: 0
@@ -105,9 +60,36 @@ MonoBehaviour:
     maxRotations: 0
     directional: 0
     arrowDir: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 3
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+    arrowDir: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 3
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 1
+    arrowDir: 0
   - cellType: 0
     pieceType: 0
     rotationSteps: 0
+    isStart: 0
+    color: 0
+    portalId: 0
+    maxRotations: 0
+    directional: 0
+    arrowDir: 0
+  - cellType: 2
+    pieceType: 1
+    rotationSteps: 3
     isStart: 0
     color: 0
     portalId: 0
@@ -141,95 +123,61 @@ MonoBehaviour:
     maxRotations: 0
     directional: 0
     arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  - cellType: 0
-    pieceType: 0
-    rotationSteps: 0
-    isStart: 0
-    color: 0
-    portalId: 0
-    maxRotations: 0
-    directional: 0
-    arrowDir: 0
-  levelNumber: 3
-  world: 1
-  parMoves: 6
+  levelNumber: 34
+  world: 5
+  parMoves: 10
   requiredLoops: 1
   colorLoopsMode: 0
   coverAllMode: 0
-  directionalMode: 0
+  directionalMode: 1
   solution:
-  - tx: 1
-    ty: 1
+  - tx: 0
+    ty: 0
     pieceType: 2
     rotationSteps: 0
     color: 0
-  - tx: 2
+  - tx: 0
     ty: 1
     pieceType: 1
+    rotationSteps: 0
+    color: 0
+  - tx: 0
+    ty: 2
+    pieceType: 1
+    rotationSteps: 0
+    color: 0
+  - tx: 0
+    ty: 3
+    pieceType: 2
     rotationSteps: 1
     color: 0
-  - tx: 3
-    ty: 1
-    pieceType: 2
-    rotationSteps: 3
-    color: 0
-  - tx: 3
-    ty: 2
-    pieceType: 2
-    rotationSteps: 2
-    color: 0
-  - tx: 2
-    ty: 2
+  - tx: 1
+    ty: 0
     pieceType: 1
     rotationSteps: 1
     color: 0
   - tx: 1
-    ty: 2
-    pieceType: 2
+    ty: 3
+    pieceType: 1
     rotationSteps: 1
+    color: 0
+  - tx: 2
+    ty: 0
+    pieceType: 2
+    rotationSteps: 3
+    color: 0
+  - tx: 2
+    ty: 1
+    pieceType: 1
+    rotationSteps: 0
+    color: 0
+  - tx: 2
+    ty: 2
+    pieceType: 1
+    rotationSteps: 0
+    color: 0
+  - tx: 2
+    ty: 3
+    pieceType: 2
+    rotationSteps: 2
     color: 0

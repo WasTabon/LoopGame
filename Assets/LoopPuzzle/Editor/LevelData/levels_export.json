@@ -8962,5 +8962,565 @@
     "color": 0
    }
   ]
+ },
+ {
+  "name": "Level_32",
+  "world": 5,
+  "levelNumber": 32,
+  "width": 3,
+  "height": 3,
+  "requiredLoops": 1,
+  "parMoves": 16,
+  "colorLoopsMode": false,
+  "coverAllMode": false,
+  "directionalMode": true,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": true,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": true,
+    "arrowDir": 2
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": true,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   }
+  ],
+  "solution": [
+   {
+    "tx": 0,
+    "ty": 0,
+    "pt": 2,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 1,
+    "pt": 1,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 2,
+    "pt": 2,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 0,
+    "pt": 1,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 2,
+    "pt": 1,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 0,
+    "pt": 2,
+    "trot": 3,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 1,
+    "pt": 1,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 2,
+    "pt": 2,
+    "trot": 2,
+    "color": 0
+   }
+  ]
+ },
+ {
+  "name": "Level_33",
+  "world": 5,
+  "levelNumber": 33,
+  "width": 3,
+  "height": 3,
+  "requiredLoops": 1,
+  "parMoves": 16,
+  "colorLoopsMode": false,
+  "coverAllMode": false,
+  "directionalMode": true,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": true,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": true,
+    "arrowDir": 2
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": true,
+    "arrowDir": 0
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 2,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": true,
+    "arrowDir": 2
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": true,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   }
+  ],
+  "solution": [
+   {
+    "tx": 0,
+    "ty": 0,
+    "pt": 2,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 1,
+    "pt": 1,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 2,
+    "pt": 2,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 0,
+    "pt": 1,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 2,
+    "pt": 1,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 0,
+    "pt": 2,
+    "trot": 3,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 1,
+    "pt": 1,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 2,
+    "pt": 2,
+    "trot": 2,
+    "color": 0
+   }
+  ]
+ },
+ {
+  "name": "Level_34",
+  "world": 5,
+  "levelNumber": 34,
+  "width": 3,
+  "height": 4,
+  "requiredLoops": 1,
+  "parMoves": 10,
+  "colorLoopsMode": false,
+  "coverAllMode": false,
+  "directionalMode": true,
+  "cells": [
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 3,
+    "start": true,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": true,
+    "arrowDir": 2
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 2,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": true,
+    "arrowDir": 0
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": true,
+    "arrowDir": 0
+   },
+   {
+    "ct": 0,
+    "pt": 0,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 3,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 1,
+    "rot": 0,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   },
+   {
+    "ct": 2,
+    "pt": 2,
+    "rot": 1,
+    "start": false,
+    "color": 0,
+    "portalId": 0,
+    "maxRotations": 0,
+    "directional": false,
+    "arrowDir": 0
+   }
+  ],
+  "solution": [
+   {
+    "tx": 0,
+    "ty": 0,
+    "pt": 2,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 1,
+    "pt": 1,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 2,
+    "pt": 1,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 0,
+    "ty": 3,
+    "pt": 2,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 0,
+    "pt": 1,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 1,
+    "ty": 3,
+    "pt": 1,
+    "trot": 1,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 0,
+    "pt": 2,
+    "trot": 3,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 1,
+    "pt": 1,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 2,
+    "pt": 1,
+    "trot": 0,
+    "color": 0
+   },
+   {
+    "tx": 2,
+    "ty": 3,
+    "pt": 2,
+    "trot": 2,
+    "color": 0
+   }
+  ]
  }
 ]

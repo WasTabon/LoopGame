@@ -27,6 +27,85 @@ public static class LoopValidator
         return result;
     }
 
+    public static bool ValidateDirectional(GridManager grid)
+    {
+        List<Cell> directionalCells = new List<Cell>();
+        grid.ForEachCell(cell =>
+        {
+            if (cell.currentPiece != null && cell.currentPiece.directional)
+            {
+                directionalCells.Add(cell);
+            }
+        });
+
+        if (directionalCells.Count == 0)
+        {
+            return ValidateAllLoops(grid).closedLoopCount >= 1;
+        }
+
+        LoopResult all = ValidateAllLoops(grid);
+        if (all.closedLoopCount == 0) return false;
+
+        Dictionary<Cell, int> exitDir = TraceExitDirections(grid);
+        if (exitDir == null) return false;
+
+        bool orientationA = true;
+        bool orientationB = true;
+        foreach (Cell dc in directionalCells)
+        {
+            if (!exitDir.ContainsKey(dc)) return false;
+            int traced = exitDir[dc];
+            int arrow = dc.currentPiece.CurrentArrowDir();
+            if (arrow != traced) orientationA = false;
+            if (arrow != (int)PieceConnections.Opposite((Direction)traced)) orientationB = false;
+        }
+        return orientationA || orientationB;
+    }
+
+    private static Dictionary<Cell, int> TraceExitDirections(GridManager grid)
+    {
+        Dictionary<Cell, int> result = new Dictionary<Cell, int>();
+        Cell start = null;
+        grid.ForEachCell(cell =>
+        {
+            if (start == null && cell.currentPiece != null) start = cell;
+        });
+        if (start == null) return null;
+
+        bool[] startConn = start.currentPiece.GetConnections();
+        int firstDir = -1;
+        for (int d = 0; d < 4; d++)
+        {
+            if (startConn[d]) { firstDir = d; break; }
+        }
+        if (firstDir == -1) return null;
+
+        Cell cell = start;
+        int curOut = firstDir;
+        int guard = 0;
+        while (guard++ < 10000)
+        {
+            result[cell] = curOut;
+            Cell next = GetNeighbor(grid, cell, (Direction)curOut);
+            if (next == null || next.currentPiece == null) return null;
+
+            int enter = (int)PieceConnections.Opposite((Direction)curOut);
+            bool[] nc = next.currentPiece.GetConnections();
+            int exit = -1;
+            int exitCount = 0;
+            for (int d = 0; d < 4; d++)
+            {
+                if (nc[d] && d != enter) { exit = d; exitCount++; }
+            }
+            if (exitCount != 1) return null;
+
+            cell = next;
+            curOut = exit;
+            if (cell == start && curOut == firstDir) break;
+        }
+        return result;
+    }
+
     public static bool ValidateColorLoops(GridManager grid)
     {
         HashSet<PieceColor> colorsPresent = new HashSet<PieceColor>();

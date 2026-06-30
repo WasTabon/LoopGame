@@ -9,6 +9,7 @@ public class PathPiece : MonoBehaviour
     public PieceColor pieceColor = PieceColor.Neutral;
     public int maxRotations = 0;
     public bool directional = false;
+    public int arrowBaseDir = 0;
 
     private SpriteRenderer spriteRenderer;
     private Tween rotateTween;
@@ -19,6 +20,7 @@ public class PathPiece : MonoBehaviour
     private int rotationsUsed = 0;
     private TextMesh limitRenderer;
     private GameObject limitLabel;
+    private GameObject arrowLabel;
 
     private static readonly Color HighlightColor = new Color(1f, 0.95f, 0.7f, 1f);
 
@@ -154,6 +156,30 @@ public class PathPiece : MonoBehaviour
     public bool[] GetConnections()
     {
         return PieceConnections.GetRotatedConnections(pieceType, rotationSteps);
+    }
+
+    public int CurrentArrowDir()
+    {
+        return ((arrowBaseDir + rotationSteps) % 4 + 4) % 4;
+    }
+
+    public void SetupArrowIndicator()
+    {
+        if (!directional) return;
+        if (arrowLabel != null) return;
+
+        GameObject arrowGo = new GameObject("FlowArrow");
+        arrowGo.transform.SetParent(transform, false);
+        arrowLabel = arrowGo;
+
+        SpriteRenderer sr = arrowGo.AddComponent<SpriteRenderer>();
+        sr.sprite = PieceSpriteFactory.GetFlowArrowSprite();
+        sr.sortingOrder = 10;
+        sr.color = new Color(0.1f, 0.1f, 0.15f, 0.9f);
+
+        arrowGo.transform.localPosition = new Vector3(0, 0, -0.1f);
+        arrowGo.transform.localRotation = Quaternion.Euler(0, 0, -90f * arrowBaseDir);
+        arrowGo.transform.localScale = Vector3.one * 0.6f;
     }
 
     public void Rotate(System.Action onComplete = null)

@@ -23,6 +23,7 @@ MonoBehaviour:
     portalId: 0
     maxRotations: 0
     directional: 0
+    arrowDir: 0
   - cellType: 2
     pieceType: 2
     rotationSteps: 2
@@ -31,6 +32,7 @@ MonoBehaviour:
     portalId: 0
     maxRotations: 0
     directional: 0
+    arrowDir: 0
   - cellType: 6
     pieceType: 2
     rotationSteps: 0
@@ -39,6 +41,7 @@ MonoBehaviour:
     portalId: 0
     maxRotations: 0
     directional: 0
+    arrowDir: 0
   - cellType: 0
     pieceType: 0
     rotationSteps: 0
@@ -47,6 +50,7 @@ MonoBehaviour:
     portalId: 0
     maxRotations: 0
     directional: 0
+    arrowDir: 0
   - cellType: 2
     pieceType: 2
     rotationSteps: 1
@@ -55,6 +59,7 @@ MonoBehaviour:
     portalId: 0
     maxRotations: 0
     directional: 0
+    arrowDir: 0
   - cellType: 0
     pieceType: 0
     rotationSteps: 0
@@ -63,12 +68,14 @@ MonoBehaviour:
     portalId: 0
     maxRotations: 0
     directional: 0
+    arrowDir: 0
   levelNumber: 31
   world: 5
   parMoves: 5
   requiredLoops: 1
   colorLoopsMode: 0
   coverAllMode: 0
+  directionalMode: 0
   solution:
   - tx: 0
     ty: 0

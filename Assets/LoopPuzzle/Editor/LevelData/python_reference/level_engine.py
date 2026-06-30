@@ -170,3 +170,38 @@ def is_color_win(placement):
 
 def min_taps(start_rot, target_rot):
     return (target_rot - start_rot) % 4
+
+
+def trace_exit_directions(placement):
+    """Trace a single simple loop, returning {pos: exit_dir}. None if junction/open.
+    placement: pos->(pt,rot) or (pt,rot,color)."""
+    pl=_normalize(placement)
+    conn={pos:rot(pt,r) for pos,(pt,r,col) in pl.items()}
+    start=next(iter(conn))
+    c=conn[start]
+    first=next((d for d in range(4) if c[d]), None)
+    if first is None: return None
+    cell=start; cur=first; out={}; guard=0
+    while guard<10000:
+        guard+=1
+        out[cell]=cur
+        dx,dy=OFF[cur]; nxt=(cell[0]+dx,cell[1]+dy)
+        if nxt not in conn: return None
+        enter=OPP[cur]; nc=conn[nxt]
+        exits=[d for d in range(4) if nc[d] and d!=enter]
+        if len(exits)!=1: return None
+        cell=nxt; cur=exits[0]
+        if cell==start and cur==first: break
+    return out
+
+def is_directional_win(placement, arrows):
+    """arrows: pos->absolute_arrow_dir (already rotated) for directional pieces.
+    Win if loop closed and an orientation satisfies all arrows."""
+    n,ok=count_closed_loops(placement)
+    if not ok or n==0: return False
+    exit_of=trace_exit_directions(placement)
+    if exit_of is None:
+        return False
+    a1=all(arrows[c]==exit_of[c] for c in arrows if arrows[c] is not None)
+    a2=all(arrows[c]==OPP[exit_of[c]] for c in arrows if arrows[c] is not None)
+    return a1 or a2

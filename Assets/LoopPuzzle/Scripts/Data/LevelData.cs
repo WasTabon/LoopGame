@@ -12,6 +12,7 @@ public class CellDefinition
     public int portalId = 0;
     public int maxRotations = 0;
     public bool directional = false;
+    public int arrowDir = 0;
 }
 
 [System.Serializable]
@@ -39,6 +40,7 @@ public class LevelData : ScriptableObject
 
     public bool colorLoopsMode = false;
     public bool coverAllMode = false;
+    public bool directionalMode = false;
 
     public SolutionEntry[] solution;
 
