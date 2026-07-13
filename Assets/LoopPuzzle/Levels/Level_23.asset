@@ -265,8 +265,8 @@ MonoBehaviour:
     maxRotations: 0
     directional: 0
     arrowDir: 0
-  levelNumber: 23
-  world: 5
+  levelNumber: 39
+  world: 7
   parMoves: 27
   requiredLoops: 1
   colorLoopsMode: 0

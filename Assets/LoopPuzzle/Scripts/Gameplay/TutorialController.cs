@@ -67,8 +67,11 @@ public class TutorialController : MonoBehaviour
 
         string message = null;
         if (level.levelNumber == 11) message = "New: some pieces are fixed and cannot move";
-        else if (level.levelNumber == 16) message = "New: form two separate loops";
-        else if (level.levelNumber == 21) message = "Advanced: bigger boards and junctions";
+        else if (level.levelNumber == 14) message = "New: form two separate loops";
+        else if (level.levelNumber == 17) message = "New: bridges, rotation limits, breakable cells";
+        else if (level.levelNumber == 23) message = "New: arrows set the flow direction; colors need their own loops";
+        else if (level.levelNumber == 29) message = "New: portals teleport the loop across the board";
+        else if (level.levelNumber == 35) message = "Master challenges: everything combined";
 
         if (message != null)
         {
